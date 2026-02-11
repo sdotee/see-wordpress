@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div class="wrap see-settings-page">
-	<h1><?php esc_html_e( 'S.EE Settings', 'see' ); ?></h1>
+	<h1><?php esc_html_e( 'S.EE Settings', 'sdotee' ); ?></h1>
 
 	<form method="post" action="options.php">
 		<?php

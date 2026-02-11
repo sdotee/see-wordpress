@@ -36,7 +36,7 @@ class SEE_ShortUrl {
 		foreach ( $post_types as $post_type ) {
 			add_meta_box(
 				'see-shorturl-metabox',
-				__( 'S.EE Short URL', 'see' ),
+				__( 'S.EE Short URL', 'sdotee' ),
 				array( $this, 'render_meta_box' ),
 				$post_type,
 				'side',
@@ -97,12 +97,12 @@ class SEE_ShortUrl {
 	public function create_short_url( int $post_id, string $custom_slug = '', string $domain = '' ): array|\WP_Error {
 		$client = SEE_Helpers::get_client();
 		if ( null === $client ) {
-			return new \WP_Error( 'see_no_client', __( 'S.EE client not configured. Please set your API key.', 'see' ) );
+			return new \WP_Error( 'see_no_client', __( 'S.EE client not configured. Please set your API key.', 'sdotee' ) );
 		}
 
 		$permalink = get_permalink( $post_id );
 		if ( ! $permalink ) {
-			return new \WP_Error( 'see_no_permalink', __( 'Could not get post permalink.', 'see' ) );
+			return new \WP_Error( 'see_no_permalink', __( 'Could not get post permalink.', 'sdotee' ) );
 		}
 
 		if ( empty( $domain ) ) {
@@ -115,7 +115,7 @@ class SEE_ShortUrl {
 			if ( ! empty( $domains ) ) {
 				$domain = $domains[0];
 			} else {
-				return new \WP_Error( 'see_no_domain', __( 'No domain available. Please configure a default domain.', 'see' ) );
+				return new \WP_Error( 'see_no_domain', __( 'No domain available. Please configure a default domain.', 'sdotee' ) );
 			}
 		}
 
@@ -154,7 +154,7 @@ class SEE_ShortUrl {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'edit_posts' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$post_id     = isset( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : 0;
@@ -162,7 +162,7 @@ class SEE_ShortUrl {
 		$domain      = isset( $_POST['domain'] ) ? sanitize_text_field( wp_unslash( $_POST['domain'] ) ) : '';
 
 		if ( 0 === $post_id ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid post ID.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Invalid post ID.', 'sdotee' ) ) );
 		}
 
 		$result = $this->create_short_url( $post_id, $custom_slug, $domain );
@@ -172,7 +172,7 @@ class SEE_ShortUrl {
 		}
 
 		wp_send_json_success( array(
-			'message'   => __( 'Short URL created successfully!', 'see' ),
+			'message'   => __( 'Short URL created successfully!', 'sdotee' ),
 			'short_url' => $result['short_url'] ?? '',
 			'slug'      => $result['slug'] ?? '',
 			'domain'    => $domain,
@@ -186,25 +186,25 @@ class SEE_ShortUrl {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'edit_posts' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$post_id = isset( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : 0;
 
 		if ( 0 === $post_id ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid post ID.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Invalid post ID.', 'sdotee' ) ) );
 		}
 
 		$domain = get_post_meta( $post_id, '_see_short_domain', true );
 		$slug   = get_post_meta( $post_id, '_see_short_slug', true );
 
 		if ( empty( $domain ) || empty( $slug ) ) {
-			wp_send_json_error( array( 'message' => __( 'No short URL found for this post.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'No short URL found for this post.', 'sdotee' ) ) );
 		}
 
 		$client = SEE_Helpers::get_client();
 		if ( null === $client ) {
-			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'sdotee' ) ) );
 		}
 
 		try {
@@ -216,7 +216,7 @@ class SEE_ShortUrl {
 			delete_post_meta( $post_id, '_see_short_domain' );
 
 			wp_send_json_success( array(
-				'message' => __( 'Short URL deleted successfully!', 'see' ),
+				'message' => __( 'Short URL deleted successfully!', 'sdotee' ),
 			) );
 		} catch ( \See\Exception\SeeException $e ) {
 			SEE_Helpers::log_error( 'Short URL deletion failed: ' . $e->getMessage() );

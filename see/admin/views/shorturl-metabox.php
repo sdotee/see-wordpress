@@ -25,17 +25,17 @@ $default   = get_option( 'see_default_domain', '' );
 			</p>
 			<div class="see-shorturl-actions">
 				<button type="button" class="button button-small see-copy-btn" data-url="<?php echo esc_attr( $short_url ); ?>">
-					<span class="dashicons dashicons-clipboard"></span> <?php esc_html_e( 'Copy', 'see' ); ?>
+					<span class="dashicons dashicons-clipboard"></span> <?php esc_html_e( 'Copy', 'sdotee' ); ?>
 				</button>
 				<button type="button" class="button button-small see-delete-shorturl-btn">
-					<span class="dashicons dashicons-trash"></span> <?php esc_html_e( 'Delete', 'see' ); ?>
+					<span class="dashicons dashicons-trash"></span> <?php esc_html_e( 'Delete', 'sdotee' ); ?>
 				</button>
 			</div>
 		</div>
 	<?php else : ?>
 		<div class="see-shorturl-form">
 			<p>
-				<label for="see-shorturl-domain"><?php esc_html_e( 'Domain:', 'see' ); ?></label>
+				<label for="see-shorturl-domain"><?php esc_html_e( 'Domain:', 'sdotee' ); ?></label>
 				<select id="see-shorturl-domain" class="widefat">
 					<?php foreach ( $domains as $d ) : ?>
 						<option value="<?php echo esc_attr( $d ); ?>" <?php selected( $default, $d ); ?>>
@@ -45,12 +45,12 @@ $default   = get_option( 'see_default_domain', '' );
 				</select>
 			</p>
 			<p>
-				<label for="see-shorturl-slug"><?php esc_html_e( 'Custom slug (optional):', 'see' ); ?></label>
-				<input type="text" id="see-shorturl-slug" class="widefat" placeholder="<?php esc_attr_e( 'Leave blank for auto-generated', 'see' ); ?>" />
+				<label for="see-shorturl-slug"><?php esc_html_e( 'Custom slug (optional):', 'sdotee' ); ?></label>
+				<input type="text" id="see-shorturl-slug" class="widefat" placeholder="<?php esc_attr_e( 'Leave blank for auto-generated', 'sdotee' ); ?>" />
 			</p>
 			<p>
 				<button type="button" class="button button-primary see-generate-shorturl-btn">
-					<?php esc_html_e( 'Generate Short URL', 'see' ); ?>
+					<?php esc_html_e( 'Generate Short URL', 'sdotee' ); ?>
 				</button>
 				<span class="see-shorturl-status"></span>
 			</p>

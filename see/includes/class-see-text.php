@@ -34,7 +34,7 @@ class SEE_Text {
 		foreach ( $post_types as $post_type ) {
 			add_meta_box(
 				'see-text-metabox',
-				__( 'S.EE Text Share', 'see' ),
+				__( 'S.EE Text Share', 'sdotee' ),
 				array( $this, 'render_meta_box' ),
 				$post_type,
 				'side',
@@ -63,36 +63,36 @@ class SEE_Text {
 					</p>
 					<div class="see-text-actions">
 						<button type="button" class="button button-small see-copy-btn" data-url="<?php echo esc_attr( $text_url ); ?>">
-							<?php esc_html_e( 'Copy', 'see' ); ?>
+							<?php esc_html_e( 'Copy', 'sdotee' ); ?>
 						</button>
 						<button type="button" class="button button-small see-delete-text-btn"
 								data-domain="<?php echo esc_attr( $text_domain ); ?>"
 								data-slug="<?php echo esc_attr( $text_slug ); ?>">
-							<?php esc_html_e( 'Delete', 'see' ); ?>
+							<?php esc_html_e( 'Delete', 'sdotee' ); ?>
 						</button>
 					</div>
 				</div>
 			<?php else : ?>
 				<div class="see-text-form">
 					<p>
-						<label for="see-text-content"><?php esc_html_e( 'Content:', 'see' ); ?></label>
+						<label for="see-text-content"><?php esc_html_e( 'Content:', 'sdotee' ); ?></label>
 						<textarea id="see-text-content" rows="5" class="widefat"></textarea>
 					</p>
 					<p>
-						<label for="see-text-title"><?php esc_html_e( 'Title (optional):', 'see' ); ?></label>
+						<label for="see-text-title"><?php esc_html_e( 'Title (optional):', 'sdotee' ); ?></label>
 						<input type="text" id="see-text-title" class="widefat" />
 					</p>
 					<p>
-						<label for="see-text-type"><?php esc_html_e( 'Type:', 'see' ); ?></label>
+						<label for="see-text-type"><?php esc_html_e( 'Type:', 'sdotee' ); ?></label>
 						<select id="see-text-type" class="widefat">
-							<option value="plain_text"><?php esc_html_e( 'Plain Text', 'see' ); ?></option>
-							<option value="markdown"><?php esc_html_e( 'Markdown', 'see' ); ?></option>
-							<option value="source_code"><?php esc_html_e( 'Source Code', 'see' ); ?></option>
+							<option value="plain_text"><?php esc_html_e( 'Plain Text', 'sdotee' ); ?></option>
+							<option value="markdown"><?php esc_html_e( 'Markdown', 'sdotee' ); ?></option>
+							<option value="source_code"><?php esc_html_e( 'Source Code', 'sdotee' ); ?></option>
 						</select>
 					</p>
 					<p>
 						<button type="button" class="button button-primary see-create-text-btn">
-							<?php esc_html_e( 'Share Text', 'see' ); ?>
+							<?php esc_html_e( 'Share Text', 'sdotee' ); ?>
 						</button>
 						<span class="see-text-status"></span>
 					</p>
@@ -109,7 +109,7 @@ class SEE_Text {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'edit_posts' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$content   = isset( $_POST['content'] ) ? sanitize_textarea_field( wp_unslash( $_POST['content'] ) ) : '';
@@ -118,7 +118,7 @@ class SEE_Text {
 		$post_id   = isset( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : 0;
 
 		if ( empty( $content ) ) {
-			wp_send_json_error( array( 'message' => __( 'Content cannot be empty.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Content cannot be empty.', 'sdotee' ) ) );
 		}
 
 		// Validate text_type.
@@ -129,7 +129,7 @@ class SEE_Text {
 
 		$client = SEE_Helpers::get_client();
 		if ( null === $client ) {
-			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'sdotee' ) ) );
 		}
 
 		$options = array(
@@ -172,7 +172,7 @@ class SEE_Text {
 			}
 
 			wp_send_json_success( array(
-				'message'  => __( 'Text shared successfully!', 'see' ),
+				'message'  => __( 'Text shared successfully!', 'sdotee' ),
 				'text_url' => $text_url,
 				'slug'     => $text_slug,
 				'domain'   => $text_domain,
@@ -190,7 +190,7 @@ class SEE_Text {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'edit_posts' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$domain  = isset( $_POST['domain'] ) ? sanitize_text_field( wp_unslash( $_POST['domain'] ) ) : '';
@@ -198,12 +198,12 @@ class SEE_Text {
 		$post_id = isset( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : 0;
 
 		if ( empty( $domain ) || empty( $slug ) ) {
-			wp_send_json_error( array( 'message' => __( 'Missing domain or slug.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Missing domain or slug.', 'sdotee' ) ) );
 		}
 
 		$client = SEE_Helpers::get_client();
 		if ( null === $client ) {
-			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'sdotee' ) ) );
 		}
 
 		try {
@@ -217,7 +217,7 @@ class SEE_Text {
 			}
 
 			wp_send_json_success( array(
-				'message' => __( 'Text share deleted successfully!', 'see' ),
+				'message' => __( 'Text share deleted successfully!', 'sdotee' ),
 			) );
 		} catch ( \See\Exception\SeeException $e ) {
 			SEE_Helpers::log_error( 'Text share deletion failed: ' . $e->getMessage() );
@@ -232,19 +232,19 @@ class SEE_Text {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'edit_posts' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$entry_id = isset( $_POST['entry_id'] ) ? sanitize_text_field( wp_unslash( $_POST['entry_id'] ) ) : '';
 
 		if ( empty( $entry_id ) ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid entry.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Invalid entry.', 'sdotee' ) ) );
 		}
 
 		SEE_Helpers::remove_history( 'see_text_history', $entry_id );
 
 		wp_send_json_success( array(
-			'message' => __( 'History entry removed.', 'see' ),
+			'message' => __( 'History entry removed.', 'sdotee' ),
 		) );
 	}
 }

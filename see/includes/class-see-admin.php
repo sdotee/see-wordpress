@@ -37,8 +37,8 @@ class SEE_Admin {
 	public function register_menus(): void {
 		// Settings page under Settings menu.
 		add_options_page(
-			__( 'S.EE Settings', 'see' ),
-			__( 'S.EE', 'see' ),
+			__( 'S.EE Settings', 'sdotee' ),
+			__( 'S.EE', 'sdotee' ),
 			'manage_options',
 			'see-settings',
 			array( $this, 'render_settings_page' )
@@ -46,8 +46,8 @@ class SEE_Admin {
 
 		// Management page under Tools menu.
 		add_management_page(
-			__( 'S.EE Management', 'see' ),
-			__( 'S.EE', 'see' ),
+			__( 'S.EE Management', 'sdotee' ),
+			__( 'S.EE', 'sdotee' ),
 			'edit_posts',
 			'see-management',
 			array( $this, 'render_management_page' )
@@ -101,21 +101,21 @@ class SEE_Admin {
 			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
 			'nonce'   => wp_create_nonce( 'see_admin_nonce' ),
 			'i18n'    => array(
-				'testing'          => __( 'Testing...', 'see' ),
-				'success'          => __( 'Connection successful!', 'see' ),
-				'error'            => __( 'Error', 'see' ),
-				'copied'           => __( 'Copied!', 'see' ),
-				'copyFailed'       => __( 'Copy failed', 'see' ),
-				'generating'       => __( 'Generating...', 'see' ),
-				'deleting'         => __( 'Deleting...', 'see' ),
-				'uploading'        => __( 'Uploading...', 'see' ),
-				'sharing'          => __( 'Sharing...', 'see' ),
-				'refreshing'       => __( 'Refreshing...', 'see' ),
-				'confirm_delete'   => __( 'Are you sure you want to delete this?', 'see' ),
-				'confirm_remove_history' => __( "This will only remove the record from local history.\n\nThe content on S.EE will NOT be deleted. If you need to delete the source file, please visit s.ee/user/links.\n\nContinue?", 'see' ),
-				'no_api_key'       => __( 'Please configure your API key in S.EE settings first.', 'see' ),
-				'show'             => __( 'Show', 'see' ),
-				'hide'             => __( 'Hide', 'see' ),
+				'testing'          => __( 'Testing...', 'sdotee' ),
+				'success'          => __( 'Connection successful!', 'sdotee' ),
+				'error'            => __( 'Error', 'sdotee' ),
+				'copied'           => __( 'Copied!', 'sdotee' ),
+				'copyFailed'       => __( 'Copy failed', 'sdotee' ),
+				'generating'       => __( 'Generating...', 'sdotee' ),
+				'deleting'         => __( 'Deleting...', 'sdotee' ),
+				'uploading'        => __( 'Uploading...', 'sdotee' ),
+				'sharing'          => __( 'Sharing...', 'sdotee' ),
+				'refreshing'       => __( 'Refreshing...', 'sdotee' ),
+				'confirm_delete'   => __( 'Are you sure you want to delete this?', 'sdotee' ),
+				'confirm_remove_history' => __( "This will only remove the record from local history.\n\nThe content on S.EE will NOT be deleted. If you need to delete the source file, please visit s.ee/user/links.\n\nContinue?", 'sdotee' ),
+				'no_api_key'       => __( 'Please configure your API key in S.EE settings first.', 'sdotee' ),
+				'show'             => __( 'Show', 'sdotee' ),
+				'hide'             => __( 'Hide', 'sdotee' ),
 			),
 		) );
 	}
@@ -128,7 +128,7 @@ class SEE_Admin {
 	 */
 	public function plugin_action_links( array $links ): array {
 		$settings_link = '<a href="' . esc_url( admin_url( 'options-general.php?page=see-settings' ) ) . '">'
-			. esc_html__( 'Settings', 'see' ) . '</a>';
+			. esc_html__( 'Settings', 'sdotee' ) . '</a>';
 		array_unshift( $links, $settings_link );
 		return $links;
 	}
@@ -138,7 +138,7 @@ class SEE_Admin {
 	 */
 	public function render_settings_page(): void {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( esc_html__( 'You do not have permission to access this page.', 'see' ) );
+			wp_die( esc_html__( 'You do not have permission to access this page.', 'sdotee' ) );
 		}
 		include SEE_PLUGIN_DIR . 'admin/views/settings-page.php';
 	}
@@ -148,7 +148,7 @@ class SEE_Admin {
 	 */
 	public function render_management_page(): void {
 		if ( ! current_user_can( 'edit_posts' ) ) {
-			wp_die( esc_html__( 'You do not have permission to access this page.', 'see' ) );
+			wp_die( esc_html__( 'You do not have permission to access this page.', 'sdotee' ) );
 		}
 		include SEE_PLUGIN_DIR . 'admin/views/management-page.php';
 	}
@@ -160,7 +160,7 @@ class SEE_Admin {
 	 * @return array Modified columns.
 	 */
 	public function add_shorturl_column( array $columns ): array {
-		$columns['see_short_url'] = __( 'Short URL', 'see' );
+		$columns['see_short_url'] = __( 'Short URL', 'sdotee' );
 		return $columns;
 	}
 
@@ -180,7 +180,7 @@ class SEE_Admin {
 			echo '<a href="' . esc_url( $short_url ) . '" target="_blank" class="see-short-url-link" title="'
 				. esc_attr( $short_url ) . '">' . esc_html( $short_url ) . '</a>';
 			echo ' <button type="button" class="button-link see-copy-btn" data-url="'
-				. esc_attr( $short_url ) . '" title="' . esc_attr__( 'Copy', 'see' ) . '">';
+				. esc_attr( $short_url ) . '" title="' . esc_attr__( 'Copy', 'sdotee' ) . '">';
 			echo '<span class="dashicons dashicons-clipboard"></span></button>';
 		} else {
 			echo '<span class="see-no-url">—</span>';

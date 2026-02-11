@@ -48,7 +48,7 @@ class SEE_File {
 		foreach ( $post_types as $post_type ) {
 			add_meta_box(
 				'see-file-metabox',
-				__( 'S.EE File Upload', 'see' ),
+				__( 'S.EE File Upload', 'sdotee' ),
 				array( $this, 'render_meta_box' ),
 				$post_type,
 				'side',
@@ -70,7 +70,7 @@ class SEE_File {
 			<?php if ( ! empty( $file_url ) ) : ?>
 				<div class="see-file-result">
 					<p class="see-file-name">
-						<strong><?php esc_html_e( 'File:', 'see' ); ?></strong>
+						<strong><?php esc_html_e( 'File:', 'sdotee' ); ?></strong>
 						<?php echo esc_html( $file_name ); ?>
 					</p>
 					<p class="see-file-url">
@@ -94,7 +94,7 @@ class SEE_File {
 					</div>
 					<div class="see-file-actions">
 						<button type="button" class="button button-small see-delete-sidebar-file-btn">
-							<?php esc_html_e( 'Delete', 'see' ); ?>
+							<?php esc_html_e( 'Delete', 'sdotee' ); ?>
 						</button>
 					</div>
 				</div>
@@ -105,7 +105,7 @@ class SEE_File {
 					</p>
 					<p>
 						<button type="button" class="button button-primary see-upload-sidebar-file-btn">
-							<?php esc_html_e( 'Upload to S.EE', 'see' ); ?>
+							<?php esc_html_e( 'Upload to S.EE', 'sdotee' ); ?>
 						</button>
 						<span class="see-sidebar-file-status"></span>
 					</p>
@@ -122,28 +122,28 @@ class SEE_File {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'upload_files' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$post_id = isset( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : 0;
 
 		if ( 0 === $post_id ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid post ID.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Invalid post ID.', 'sdotee' ) ) );
 		}
 
 		if ( empty( $_FILES['file'] ) ) {
-			wp_send_json_error( array( 'message' => __( 'No file provided.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'No file provided.', 'sdotee' ) ) );
 		}
 
 		$file = $_FILES['file']; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput -- File data is validated below and sanitized via sanitize_file_name().
 
 		if ( $file['error'] !== UPLOAD_ERR_OK ) {
-			wp_send_json_error( array( 'message' => __( 'File upload error.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'File upload error.', 'sdotee' ) ) );
 		}
 
 		$client = SEE_Helpers::get_client();
 		if ( null === $client ) {
-			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'sdotee' ) ) );
 		}
 
 		$tmp_path = $file['tmp_name'];
@@ -162,7 +162,7 @@ class SEE_File {
 			}
 
 			wp_send_json_success( array(
-				'message'  => __( 'File uploaded to S.EE successfully!', 'see' ),
+				'message'  => __( 'File uploaded to S.EE successfully!', 'sdotee' ),
 				'file_url' => $file_url,
 				'filename' => $filename,
 			) );
@@ -179,13 +179,13 @@ class SEE_File {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'upload_files' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$post_id = isset( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : 0;
 
 		if ( 0 === $post_id ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid post ID.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Invalid post ID.', 'sdotee' ) ) );
 		}
 
 		$delete_key = get_post_meta( $post_id, '_see_post_file_delete_key', true );
@@ -215,7 +215,7 @@ class SEE_File {
 		delete_post_meta( $post_id, '_see_post_file_delete_key' );
 
 		wp_send_json_success( array(
-			'message' => __( 'File deleted from S.EE successfully!', 'see' ),
+			'message' => __( 'File deleted from S.EE successfully!', 'sdotee' ),
 		) );
 	}
 
@@ -232,22 +232,22 @@ class SEE_File {
 
 		if ( ! empty( $file_url ) ) {
 			$form_fields['see_file_url'] = array(
-				'label' => __( 'S.EE URL', 'see' ),
+				'label' => __( 'S.EE URL', 'sdotee' ),
 				'input' => 'html',
 				'html'  => '<div class="see-attachment-field">'
 					. '<a href="' . esc_url( $file_url ) . '" target="_blank">' . esc_html( $file_url ) . '</a>'
 					. ' <button type="button" class="button button-small see-copy-btn" data-url="' . esc_attr( $file_url ) . '">'
-					. esc_html__( 'Copy', 'see' ) . '</button>'
+					. esc_html__( 'Copy', 'sdotee' ) . '</button>'
 					. ' <button type="button" class="button button-small see-delete-file-btn" data-attachment-id="' . esc_attr( $post->ID ) . '" data-delete-key="' . esc_attr( $delete_key ) . '">'
-					. esc_html__( 'Delete from S.EE', 'see' ) . '</button>'
+					. esc_html__( 'Delete from S.EE', 'sdotee' ) . '</button>'
 					. '</div>',
 			);
 		} else {
 			$form_fields['see_upload'] = array(
-				'label' => __( 'S.EE', 'see' ),
+				'label' => __( 'S.EE', 'sdotee' ),
 				'input' => 'html',
 				'html'  => '<button type="button" class="button button-small see-upload-file-btn" data-attachment-id="' . esc_attr( $post->ID ) . '">'
-					. esc_html__( 'Upload to S.EE', 'see' ) . '</button>'
+					. esc_html__( 'Upload to S.EE', 'sdotee' ) . '</button>'
 					. '<span class="see-upload-status" data-attachment-id="' . esc_attr( $post->ID ) . '"></span>',
 			);
 		}
@@ -298,12 +298,12 @@ class SEE_File {
 	public function upload_file( int $attachment_id ): array|\WP_Error {
 		$client = SEE_Helpers::get_client();
 		if ( null === $client ) {
-			return new \WP_Error( 'see_no_client', __( 'S.EE client not configured.', 'see' ) );
+			return new \WP_Error( 'see_no_client', __( 'S.EE client not configured.', 'sdotee' ) );
 		}
 
 		$file_path = get_attached_file( $attachment_id );
 		if ( ! $file_path || ! file_exists( $file_path ) ) {
-			return new \WP_Error( 'see_no_file', __( 'Attachment file not found.', 'see' ) );
+			return new \WP_Error( 'see_no_file', __( 'Attachment file not found.', 'sdotee' ) );
 		}
 
 		$filename = basename( $file_path );
@@ -335,13 +335,13 @@ class SEE_File {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'upload_files' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$attachment_id = isset( $_POST['attachment_id'] ) ? absint( $_POST['attachment_id'] ) : 0;
 
 		if ( 0 === $attachment_id ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid attachment ID.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Invalid attachment ID.', 'sdotee' ) ) );
 		}
 
 		$result = $this->upload_file( $attachment_id );
@@ -351,7 +351,7 @@ class SEE_File {
 		}
 
 		wp_send_json_success( array(
-			'message'    => __( 'File uploaded to S.EE successfully!', 'see' ),
+			'message'    => __( 'File uploaded to S.EE successfully!', 'sdotee' ),
 			'file_url'   => $result['url'] ?? '',
 			'delete_key' => $result['delete'] ?? ( $result['hash'] ?? '' ),
 		) );
@@ -364,19 +364,19 @@ class SEE_File {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'upload_files' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$delete_key    = isset( $_POST['delete_key'] ) ? sanitize_text_field( wp_unslash( $_POST['delete_key'] ) ) : '';
 		$attachment_id = isset( $_POST['attachment_id'] ) ? absint( $_POST['attachment_id'] ) : 0;
 
 		if ( empty( $delete_key ) ) {
-			wp_send_json_error( array( 'message' => __( 'Missing delete key.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Missing delete key.', 'sdotee' ) ) );
 		}
 
 		$api_key = SEE_Helpers::get_api_key();
 		if ( empty( $api_key ) ) {
-			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'sdotee' ) ) );
 		}
 
 		// Build the delete URL. Handle both full URL and hash-only values.
@@ -418,7 +418,7 @@ class SEE_File {
 		}
 
 		wp_send_json_success( array(
-			'message' => __( 'File deleted from S.EE successfully!', 'see' ),
+			'message' => __( 'File deleted from S.EE successfully!', 'sdotee' ),
 		) );
 	}
 
@@ -431,23 +431,23 @@ class SEE_File {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'upload_files' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		if ( empty( $_FILES['file'] ) ) {
-			wp_send_json_error( array( 'message' => __( 'No file provided.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'No file provided.', 'sdotee' ) ) );
 		}
 
 		$file = $_FILES['file']; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput -- File data is validated below and sanitized via sanitize_file_name().
 
 		// Validate upload.
 		if ( $file['error'] !== UPLOAD_ERR_OK ) {
-			wp_send_json_error( array( 'message' => __( 'File upload error.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'File upload error.', 'sdotee' ) ) );
 		}
 
 		$client = SEE_Helpers::get_client();
 		if ( null === $client ) {
-			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'S.EE client not configured.', 'sdotee' ) ) );
 		}
 
 		$tmp_path = $file['tmp_name'];
@@ -469,7 +469,7 @@ class SEE_File {
 			}
 
 			wp_send_json_success( array(
-				'message'    => __( 'File uploaded to S.EE successfully!', 'see' ),
+				'message'    => __( 'File uploaded to S.EE successfully!', 'sdotee' ),
 				'file_url'   => $file_url,
 				'delete_key' => $delete_key,
 			) );
@@ -486,19 +486,19 @@ class SEE_File {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'upload_files' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$entry_id = isset( $_POST['entry_id'] ) ? sanitize_text_field( wp_unslash( $_POST['entry_id'] ) ) : '';
 
 		if ( empty( $entry_id ) ) {
-			wp_send_json_error( array( 'message' => __( 'Invalid entry.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Invalid entry.', 'sdotee' ) ) );
 		}
 
 		SEE_Helpers::remove_history( 'see_file_history', $entry_id );
 
 		wp_send_json_success( array(
-			'message' => __( 'History entry removed.', 'see' ),
+			'message' => __( 'History entry removed.', 'sdotee' ),
 		) );
 	}
 }

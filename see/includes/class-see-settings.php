@@ -63,14 +63,14 @@ class SEE_Settings {
 		// API section.
 		add_settings_section(
 			'see_api_section',
-			__( 'API Configuration', 'see' ),
+			__( 'API Configuration', 'sdotee' ),
 			array( $this, 'render_api_section' ),
 			'see-settings'
 		);
 
 		add_settings_field(
 			'see_api_key',
-			__( 'API Key', 'see' ),
+			__( 'API Key', 'sdotee' ),
 			array( $this, 'render_api_key_field' ),
 			'see-settings',
 			'see_api_section'
@@ -78,7 +78,7 @@ class SEE_Settings {
 
 		add_settings_field(
 			'see_api_base_url',
-			__( 'API Base URL', 'see' ),
+			__( 'API Base URL', 'sdotee' ),
 			array( $this, 'render_api_base_url_field' ),
 			'see-settings',
 			'see_api_section'
@@ -87,14 +87,14 @@ class SEE_Settings {
 		// Defaults section.
 		add_settings_section(
 			'see_defaults_section',
-			__( 'Default Settings', 'see' ),
+			__( 'Default Settings', 'sdotee' ),
 			array( $this, 'render_defaults_section' ),
 			'see-settings'
 		);
 
 		add_settings_field(
 			'see_default_domain',
-			__( 'Default Short URL Domain', 'see' ),
+			__( 'Default Short URL Domain', 'sdotee' ),
 			array( $this, 'render_default_domain_field' ),
 			'see-settings',
 			'see_defaults_section'
@@ -102,7 +102,7 @@ class SEE_Settings {
 
 		add_settings_field(
 			'see_default_text_domain',
-			__( 'Default Text Share Domain', 'see' ),
+			__( 'Default Text Share Domain', 'sdotee' ),
 			array( $this, 'render_default_text_domain_field' ),
 			'see-settings',
 			'see_defaults_section'
@@ -110,7 +110,7 @@ class SEE_Settings {
 
 		add_settings_field(
 			'see_default_file_domain',
-			__( 'Default File Upload Domain', 'see' ),
+			__( 'Default File Upload Domain', 'sdotee' ),
 			array( $this, 'render_default_file_domain_field' ),
 			'see-settings',
 			'see_defaults_section'
@@ -119,14 +119,14 @@ class SEE_Settings {
 		// Automation section.
 		add_settings_section(
 			'see_automation_section',
-			__( 'Automation', 'see' ),
+			__( 'Automation', 'sdotee' ),
 			array( $this, 'render_automation_section' ),
 			'see-settings'
 		);
 
 		add_settings_field(
 			'see_auto_shorten',
-			__( 'Auto Shorten URLs', 'see' ),
+			__( 'Auto Shorten URLs', 'sdotee' ),
 			array( $this, 'render_auto_shorten_field' ),
 			'see-settings',
 			'see_automation_section'
@@ -134,7 +134,7 @@ class SEE_Settings {
 
 		add_settings_field(
 			'see_auto_upload',
-			__( 'Auto Upload Media', 'see' ),
+			__( 'Auto Upload Media', 'sdotee' ),
 			array( $this, 'render_auto_upload_field' ),
 			'see-settings',
 			'see_automation_section'
@@ -175,9 +175,9 @@ class SEE_Settings {
 	 * Render API section description.
 	 */
 	public function render_api_section(): void {
-		echo '<p>' . esc_html__( 'Configure your S.EE API credentials. You can get your API key from your S.EE account settings.', 'see' ) . '</p>';
+		echo '<p>' . esc_html__( 'Configure your S.EE API credentials. You can get your API key from your S.EE account settings.', 'sdotee' ) . '</p>';
 		if ( defined( 'SEE_API_KEY' ) ) {
-			echo '<p class="description"><strong>' . esc_html__( 'Note: API key is defined in wp-config.php via SEE_API_KEY constant and takes priority over the setting below.', 'see' ) . '</strong></p>';
+			echo '<p class="description"><strong>' . esc_html__( 'Note: API key is defined in wp-config.php via SEE_API_KEY constant and takes priority over the setting below.', 'sdotee' ) . '</strong></p>';
 		}
 	}
 
@@ -185,12 +185,12 @@ class SEE_Settings {
 	 * Render defaults section description.
 	 */
 	public function render_defaults_section(): void {
-		echo '<p>' . esc_html__( 'Choose default domains for short URLs, text sharing, and file uploads. Domain lists are cached and will not trigger API requests on page load.', 'see' ) . '</p>';
+		echo '<p>' . esc_html__( 'Choose default domains for short URLs, text sharing, and file uploads. Domain lists are cached and will not trigger API requests on page load.', 'sdotee' ) . '</p>';
 		echo '<p>';
 		echo '<button type="button" id="see-refresh-domains" class="button button-secondary">'
-			. esc_html__( 'Refresh Domains', 'see' ) . '</button> ';
+			. esc_html__( 'Refresh Domains', 'sdotee' ) . '</button> ';
 		echo '<span id="see-domains-status"></span> ';
-		echo '<span class="description">' . esc_html__( 'Click to fetch the latest domain lists from your S.EE account.', 'see' ) . '</span>';
+		echo '<span class="description">' . esc_html__( 'Click to fetch the latest domain lists from your S.EE account.', 'sdotee' ) . '</span>';
 		echo '</p>';
 	}
 
@@ -198,7 +198,7 @@ class SEE_Settings {
 	 * Render automation section description.
 	 */
 	public function render_automation_section(): void {
-		echo '<p>' . esc_html__( 'Enable automatic actions when publishing posts or uploading media.', 'see' ) . '</p>';
+		echo '<p>' . esc_html__( 'Enable automatic actions when publishing posts or uploading media.', 'sdotee' ) . '</p>';
 	}
 
 	/**
@@ -219,10 +219,10 @@ class SEE_Settings {
 				   <?php echo esc_attr( $disabled ); ?>
 			/>
 			<button type="button" id="see-toggle-key" class="button button-secondary">
-				<?php esc_html_e( 'Show', 'see' ); ?>
+				<?php esc_html_e( 'Show', 'sdotee' ); ?>
 			</button>
 			<button type="button" id="see-test-connection" class="button button-secondary">
-				<?php esc_html_e( 'Test Connection', 'see' ); ?>
+				<?php esc_html_e( 'Test Connection', 'sdotee' ); ?>
 			</button>
 			<span id="see-connection-status"></span>
 		</div>
@@ -230,8 +230,8 @@ class SEE_Settings {
 			<?php
 			printf(
 				/* translators: %s: URL to S.EE developer page */
-				esc_html__( 'Enter your S.EE API key. It will be stored encrypted. %s', 'see' ),
-				'<a href="https://s.ee/user/developers/" target="_blank">' . esc_html__( 'Get API Token', 'see' ) . '</a>'
+				esc_html__( 'Enter your S.EE API key. It will be stored encrypted. %s', 'sdotee' ),
+				'<a href="https://s.ee/user/developers/" target="_blank">' . esc_html__( 'Get API Token', 'sdotee' ) . '</a>'
 			);
 			?>
 		</p>
@@ -254,7 +254,7 @@ class SEE_Settings {
 			   <?php echo esc_attr( $disabled ); ?>
 		/>
 		<p class="description">
-			<?php esc_html_e( 'Default: https://s.ee/api/v1/', 'see' ); ?>
+			<?php esc_html_e( 'Default: https://s.ee/api/v1/', 'sdotee' ); ?>
 		</p>
 		<?php
 	}
@@ -270,7 +270,7 @@ class SEE_Settings {
 		}
 		?>
 		<select id="see_default_domain" name="see_default_domain" class="see-domain-select">
-			<option value=""><?php esc_html_e( '— Select Domain —', 'see' ); ?></option>
+			<option value=""><?php esc_html_e( '— Select Domain —', 'sdotee' ); ?></option>
 			<?php foreach ( $domains as $domain ) : ?>
 				<option value="<?php echo esc_attr( $domain ); ?>" <?php selected( $current, $domain ); ?>>
 					<?php echo esc_html( $domain ); ?>
@@ -291,7 +291,7 @@ class SEE_Settings {
 		}
 		?>
 		<select id="see_default_text_domain" name="see_default_text_domain" class="see-domain-select">
-			<option value=""><?php esc_html_e( '— Select Domain —', 'see' ); ?></option>
+			<option value=""><?php esc_html_e( '— Select Domain —', 'sdotee' ); ?></option>
 			<?php foreach ( $domains as $domain ) : ?>
 				<option value="<?php echo esc_attr( $domain ); ?>" <?php selected( $current, $domain ); ?>>
 					<?php echo esc_html( $domain ); ?>
@@ -312,7 +312,7 @@ class SEE_Settings {
 		}
 		?>
 		<select id="see_default_file_domain" name="see_default_file_domain" class="see-domain-select">
-			<option value=""><?php esc_html_e( '— Select Domain —', 'see' ); ?></option>
+			<option value=""><?php esc_html_e( '— Select Domain —', 'sdotee' ); ?></option>
 			<?php foreach ( $domains as $domain ) : ?>
 				<option value="<?php echo esc_attr( $domain ); ?>" <?php selected( $current, $domain ); ?>>
 					<?php echo esc_html( $domain ); ?>
@@ -334,7 +334,7 @@ class SEE_Settings {
 				   value="1"
 				   <?php checked( $value, '1' ); ?>
 			/>
-			<?php esc_html_e( 'Automatically generate a short URL when a post or page is published.', 'see' ); ?>
+			<?php esc_html_e( 'Automatically generate a short URL when a post or page is published.', 'sdotee' ); ?>
 		</label>
 		<?php
 	}
@@ -351,7 +351,7 @@ class SEE_Settings {
 				   value="1"
 				   <?php checked( $value, '1' ); ?>
 			/>
-			<?php esc_html_e( 'Automatically upload media files to S.EE when added to the Media Library.', 'see' ); ?>
+			<?php esc_html_e( 'Automatically upload media files to S.EE when added to the Media Library.', 'sdotee' ); ?>
 		</label>
 		<?php
 	}
@@ -363,7 +363,7 @@ class SEE_Settings {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$api_key = isset( $_POST['api_key'] ) ? sanitize_text_field( wp_unslash( $_POST['api_key'] ) ) : '';
@@ -374,7 +374,7 @@ class SEE_Settings {
 		}
 
 		if ( empty( $api_key ) ) {
-			wp_send_json_error( array( 'message' => __( 'Please enter an API key.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Please enter an API key.', 'sdotee' ) ) );
 		}
 
 		$base_url = isset( $_POST['base_url'] ) ? esc_url_raw( wp_unslash( $_POST['base_url'] ) ) : '';
@@ -388,7 +388,7 @@ class SEE_Settings {
 			$file_domains = $client->file->getDomains();
 			$text_domains = SEE_Helpers::fetch_text_domains( $api_key, $base_url );
 			wp_send_json_success( array(
-				'message'      => __( 'Connection successful!', 'see' ),
+				'message'      => __( 'Connection successful!', 'sdotee' ),
 				'domains'      => $domains,
 				'file_domains' => $file_domains,
 				'text_domains' => $text_domains,
@@ -397,7 +397,7 @@ class SEE_Settings {
 			wp_send_json_error( array(
 				'message' => sprintf(
 					/* translators: %s: error message */
-					__( 'Connection failed: %s', 'see' ),
+					__( 'Connection failed: %s', 'sdotee' ),
 					$e->getMessage()
 				),
 			) );
@@ -405,7 +405,7 @@ class SEE_Settings {
 			wp_send_json_error( array(
 				'message' => sprintf(
 					/* translators: %s: error message */
-					__( 'Unexpected error: %s', 'see' ),
+					__( 'Unexpected error: %s', 'sdotee' ),
 					$e->getMessage()
 				),
 			) );
@@ -419,7 +419,7 @@ class SEE_Settings {
 		check_ajax_referer( 'see_admin_nonce', 'nonce' );
 
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'see' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Permission denied.', 'sdotee' ) ) );
 		}
 
 		$domains      = SEE_Helpers::get_domains( true );
@@ -428,7 +428,7 @@ class SEE_Settings {
 
 		if ( empty( $domains ) && empty( $file_domains ) && empty( $text_domains ) ) {
 			wp_send_json_error( array(
-				'message' => __( 'No domains found. Please check your API key.', 'see' ),
+				'message' => __( 'No domains found. Please check your API key.', 'sdotee' ),
 			) );
 		}
 
@@ -436,7 +436,7 @@ class SEE_Settings {
 			'domains'      => $domains,
 			'file_domains' => $file_domains,
 			'text_domains' => $text_domains,
-			'message'      => __( 'Domains refreshed.', 'see' ),
+			'message'      => __( 'Domains refreshed.', 'sdotee' ),
 		) );
 	}
 }

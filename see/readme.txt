@@ -4,7 +4,7 @@ Tags: url shortener, short url, file upload, text share, s.ee
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 8.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -64,6 +64,9 @@ Posts and Pages are supported by default.
 
 == Changelog ==
 
+= 1.0.2 =
+* Change plugin text domain from 'see' to 'sdotee' for WordPress.org compatibility.
+
 = 1.0.1 =
 * Bump minimum PHP version from 8.1 to 8.2 (PHP 8.1 has reached end of life).
 
@@ -78,6 +81,9 @@ Posts and Pages are supported by default.
 * Full i18n support with 13 languages: English, 简体中文, 繁體中文, 日本語, 한국어, Bahasa Indonesia, Tiếng Việt, Deutsch, Français, Español, Português, Português do Brasil, and Русский.
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+Text domain changed to 'sdotee'.
 
 = 1.0.1 =
 Minimum PHP version bumped to 8.2.
