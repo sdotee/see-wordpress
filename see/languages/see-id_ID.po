@@ -1,0 +1,350 @@
+# Indonesian translation for S.EE for WordPress.
+# Copyright (C) 2025 S.EE
+# This file is distributed under the same license as the S.EE for WordPress plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: S.EE for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/sdotee/see-wordpress\n"
+"POT-Creation-Date: 2025-01-01 00:00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00:00+0000\n"
+"Last-Translator: S.EE <dev@s.ee>\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "API Configuration"
+msgstr "Konfigurasi API"
+
+msgid "Configure your S.EE API credentials. You can get your API key from your S.EE account settings."
+msgstr "Atur kredensial API S.EE Anda. API key bisa didapatkan di pengaturan akun S.EE."
+
+msgid "Note: API key is defined in wp-config.php via SEE_API_KEY constant and takes priority over the setting below."
+msgstr "Catatan: API key telah didefinisikan melalui konstanta SEE_API_KEY di wp-config.php dan akan diutamakan dari pengaturan di bawah ini."
+
+msgid "API Key"
+msgstr "API Key"
+
+msgid "API Base URL"
+msgstr "URL Dasar API"
+
+msgid "Default Settings"
+msgstr "Pengaturan Default"
+
+msgid "Choose default domains for short URLs, text sharing, and file uploads. Domain lists are cached and will not trigger API requests on page load."
+msgstr "Pilih domain default untuk URL pendek, berbagi teks, dan unggah file. Daftar domain di-cache dan tidak akan memicu permintaan API saat halaman dimuat."
+
+msgid "Click to fetch the latest domain lists from your S.EE account."
+msgstr "Klik untuk mengambil daftar domain terbaru dari akun S.EE Anda."
+
+msgid "Default Short URL Domain"
+msgstr "Domain URL Pendek Default"
+
+msgid "Default File Upload Domain"
+msgstr "Domain Unggah File Default"
+
+msgid "Automation"
+msgstr "Otomatisasi"
+
+msgid "Enable automatic actions when publishing posts or uploading media."
+msgstr "Aktifkan tindakan otomatis saat menerbitkan pos atau mengunggah media."
+
+msgid "Auto Shorten URLs"
+msgstr "Persingkat URL Otomatis"
+
+msgid "Auto Upload Media"
+msgstr "Unggah Media Otomatis"
+
+msgid "Show"
+msgstr "Tampilkan"
+
+msgid "Hide"
+msgstr "Sembunyikan"
+
+msgid "Test Connection"
+msgstr "Tes Koneksi"
+
+msgid "Enter your S.EE API key. It will be stored encrypted. %s"
+msgstr "Masukkan API key S.EE Anda. Akan disimpan dalam bentuk terenkripsi. %s"
+
+msgid "Get API Token"
+msgstr "Dapatkan API Token"
+
+msgid "Default Text Share Domain"
+msgstr "Domain Berbagi Teks Default"
+
+msgid "Default: https://s.ee/api/v1/"
+msgstr "Default: https://s.ee/api/v1/"
+
+msgid "— Select Domain —"
+msgstr "— Pilih Domain —"
+
+msgid "Refresh Domains"
+msgstr "Segarkan Domain"
+
+msgid "Automatically generate a short URL when a post or page is published."
+msgstr "Buat URL pendek secara otomatis saat pos atau halaman diterbitkan."
+
+msgid "Automatically upload media files to S.EE when added to the Media Library."
+msgstr "Unggah file media ke S.EE secara otomatis saat ditambahkan ke Pustaka Media."
+
+msgid "Permission denied."
+msgstr "Akses ditolak."
+
+msgid "Please enter an API key."
+msgstr "Silakan masukkan API key."
+
+msgid "Connection successful!"
+msgstr "Koneksi berhasil!"
+
+msgid "Connection failed: %s"
+msgstr "Koneksi gagal: %s"
+
+msgid "Unexpected error: %s"
+msgstr "Kesalahan tidak terduga: %s"
+
+msgid "No domains found. Please check your API key."
+msgstr "Domain tidak ditemukan. Silakan periksa API key Anda."
+
+msgid "Domains refreshed."
+msgstr "Domain telah disegarkan."
+
+msgid "S.EE Settings"
+msgstr "Pengaturan S.EE"
+
+msgid "S.EE"
+msgstr "S.EE"
+
+msgid "S.EE Management"
+msgstr "Manajemen S.EE"
+
+msgid "Settings"
+msgstr "Pengaturan"
+
+msgid "Short URL"
+msgstr "URL Pendek"
+
+msgid "Copy"
+msgstr "Salin"
+
+msgid "Testing..."
+msgstr "Menguji..."
+
+msgid "Copied!"
+msgstr "Tersalin!"
+
+msgid "Copy failed"
+msgstr "Gagal menyalin"
+
+msgid "Generating..."
+msgstr "Membuat..."
+
+msgid "Deleting..."
+msgstr "Menghapus..."
+
+msgid "Uploading..."
+msgstr "Mengunggah..."
+
+msgid "Sharing..."
+msgstr "Membagikan..."
+
+msgid "Refreshing..."
+msgstr "Menyegarkan..."
+
+msgid "Are you sure you want to delete this?"
+msgstr "Apakah Anda yakin ingin menghapus ini?"
+
+msgid ""
+"This will only remove the record from local history.\n"
+"\n"
+"The content on S.EE will NOT be deleted. If you need to delete the source file, please visit s.ee/user/links.\n"
+"\n"
+"Continue?"
+msgstr ""
+"Tindakan ini hanya menghapus catatan dari riwayat lokal.\n"
+"\n"
+"Konten di S.EE TIDAK akan dihapus. Jika Anda perlu menghapus file sumber, silakan kunjungi s.ee/user/links.\n"
+"\n"
+"Lanjutkan?"
+
+msgid "Please configure your API key in S.EE settings first."
+msgstr "Silakan atur API key di pengaturan S.EE terlebih dahulu."
+
+msgid "Error"
+msgstr "Kesalahan"
+
+msgid "You do not have permission to access this page."
+msgstr "Anda tidak memiliki izin untuk mengakses halaman ini."
+
+msgid "S.EE Short URL"
+msgstr "URL Pendek S.EE"
+
+msgid "S.EE client not configured. Please set your API key."
+msgstr "Klien S.EE belum dikonfigurasi. Silakan atur API key Anda."
+
+msgid "Could not get post permalink."
+msgstr "Tidak dapat mengambil permalink pos."
+
+msgid "No domain available. Please configure a default domain."
+msgstr "Tidak ada domain tersedia. Silakan atur domain default."
+
+msgid "Invalid post ID."
+msgstr "ID pos tidak valid."
+
+msgid "Short URL created successfully!"
+msgstr "URL pendek berhasil dibuat!"
+
+msgid "No short URL found for this post."
+msgstr "URL pendek untuk pos ini tidak ditemukan."
+
+msgid "S.EE client not configured."
+msgstr "Klien S.EE belum dikonfigurasi."
+
+msgid "Short URL deleted successfully!"
+msgstr "URL pendek berhasil dihapus!"
+
+msgid "S.EE URL"
+msgstr "URL S.EE"
+
+msgid "Delete from S.EE"
+msgstr "Hapus dari S.EE"
+
+msgid "Upload to S.EE"
+msgstr "Unggah ke S.EE"
+
+msgid "Attachment file not found."
+msgstr "File lampiran tidak ditemukan."
+
+msgid "Invalid attachment ID."
+msgstr "ID lampiran tidak valid."
+
+msgid "File uploaded to S.EE successfully!"
+msgstr "File berhasil diunggah ke S.EE!"
+
+msgid "Missing delete key."
+msgstr "Kunci penghapusan tidak ditemukan."
+
+msgid "File deleted from S.EE successfully!"
+msgstr "File berhasil dihapus dari S.EE!"
+
+msgid "No file provided."
+msgstr "Tidak ada file yang diberikan."
+
+msgid "File upload error."
+msgstr "Gagal mengunggah file."
+
+msgid "S.EE File Upload"
+msgstr "Unggah File S.EE"
+
+msgid "File:"
+msgstr "File:"
+
+msgid "S.EE Text Share"
+msgstr "Berbagi Teks S.EE"
+
+msgid "Content:"
+msgstr "Konten:"
+
+msgid "Title (optional):"
+msgstr "Judul (opsional):"
+
+msgid "Type:"
+msgstr "Jenis:"
+
+msgid "Plain Text"
+msgstr "Teks Biasa"
+
+msgid "Markdown"
+msgstr "Markdown"
+
+msgid "Source Code"
+msgstr "Kode Sumber"
+
+msgid "Share Text"
+msgstr "Bagikan Teks"
+
+msgid "Content cannot be empty."
+msgstr "Konten tidak boleh kosong."
+
+msgid "Text shared successfully!"
+msgstr "Teks berhasil dibagikan!"
+
+msgid "Missing domain or slug."
+msgstr "Domain atau slug tidak ditemukan."
+
+msgid "Text share deleted successfully!"
+msgstr "Berbagi teks berhasil dihapus!"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Domain:"
+msgstr "Domain:"
+
+msgid "Custom slug (optional):"
+msgstr "Slug kustom (opsional):"
+
+msgid "Leave blank for auto-generated"
+msgstr "Kosongkan untuk dibuat otomatis"
+
+msgid "Generate Short URL"
+msgstr "Buat URL Pendek"
+
+msgid "Text Share"
+msgstr "Berbagi Teks"
+
+msgid "File Upload"
+msgstr "Unggah File"
+
+msgid "Title"
+msgstr "Judul"
+
+msgid "Content"
+msgstr "Konten"
+
+msgid "Shared URL:"
+msgstr "URL Berbagi:"
+
+msgid "Upload File"
+msgstr "Unggah File"
+
+msgid "Drag & drop files here, or click to select files."
+msgstr "Seret & lepas file di sini, atau klik untuk memilih file."
+
+msgid "Browse Files"
+msgstr "Jelajahi File"
+
+msgid "File URL:"
+msgstr "URL File:"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Date"
+msgstr "Tanggal"
+
+msgid "Actions"
+msgstr "Tindakan"
+
+msgid "Filename"
+msgstr "Nama File"
+
+msgid "Text Share History"
+msgstr "Riwayat Berbagi Teks"
+
+msgid "File Upload History"
+msgstr "Riwayat Unggah File"
+
+msgid "Remove"
+msgstr "Hapus"
+
+msgid "History entry removed."
+msgstr "Riwayat telah dihapus."
+
+msgid "Invalid entry."
+msgstr "Entri tidak valid."

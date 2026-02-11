@@ -1,0 +1,350 @@
+# Vietnamese translation for S.EE for WordPress.
+# Copyright (C) 2025 S.EE
+# This file is distributed under the same license as the S.EE for WordPress plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: S.EE for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/sdotee/see-wordpress\n"
+"POT-Creation-Date: 2025-01-01 00:00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00:00+0000\n"
+"Last-Translator: S.EE <dev@s.ee>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "API Configuration"
+msgstr "Cấu hình API"
+
+msgid "Configure your S.EE API credentials. You can get your API key from your S.EE account settings."
+msgstr "Thiết lập thông tin xác thực API S.EE. Bạn có thể lấy API key từ phần cài đặt tài khoản S.EE."
+
+msgid "Note: API key is defined in wp-config.php via SEE_API_KEY constant and takes priority over the setting below."
+msgstr "Lưu ý: API key đã được định nghĩa qua hằng số SEE_API_KEY trong wp-config.php và được ưu tiên hơn cài đặt bên dưới."
+
+msgid "API Key"
+msgstr "API Key"
+
+msgid "API Base URL"
+msgstr "URL gốc API"
+
+msgid "Default Settings"
+msgstr "Cài đặt mặc định"
+
+msgid "Choose default domains for short URLs, text sharing, and file uploads. Domain lists are cached and will not trigger API requests on page load."
+msgstr "Chọn tên miền mặc định cho URL rút gọn, chia sẻ văn bản và tải file lên. Danh sách tên miền được lưu bộ nhớ đệm và không gửi yêu cầu API khi tải trang."
+
+msgid "Click to fetch the latest domain lists from your S.EE account."
+msgstr "Nhấp để lấy danh sách tên miền mới nhất từ tài khoản S.EE của bạn."
+
+msgid "Default Short URL Domain"
+msgstr "Tên miền URL rút gọn mặc định"
+
+msgid "Default File Upload Domain"
+msgstr "Tên miền tải file mặc định"
+
+msgid "Automation"
+msgstr "Tự động hóa"
+
+msgid "Enable automatic actions when publishing posts or uploading media."
+msgstr "Bật các hành động tự động khi đăng bài viết hoặc tải lên media."
+
+msgid "Auto Shorten URLs"
+msgstr "Tự động rút gọn URL"
+
+msgid "Auto Upload Media"
+msgstr "Tự động tải lên media"
+
+msgid "Show"
+msgstr "Hiện"
+
+msgid "Hide"
+msgstr "Ẩn"
+
+msgid "Test Connection"
+msgstr "Kiểm tra kết nối"
+
+msgid "Enter your S.EE API key. It will be stored encrypted. %s"
+msgstr "Nhập API key S.EE của bạn. Sẽ được lưu trữ dưới dạng mã hóa. %s"
+
+msgid "Get API Token"
+msgstr "Lấy API Token"
+
+msgid "Default Text Share Domain"
+msgstr "Tên miền chia sẻ văn bản mặc định"
+
+msgid "Default: https://s.ee/api/v1/"
+msgstr "Mặc định: https://s.ee/api/v1/"
+
+msgid "— Select Domain —"
+msgstr "— Chọn tên miền —"
+
+msgid "Refresh Domains"
+msgstr "Làm mới tên miền"
+
+msgid "Automatically generate a short URL when a post or page is published."
+msgstr "Tự động tạo URL rút gọn khi bài viết hoặc trang được đăng."
+
+msgid "Automatically upload media files to S.EE when added to the Media Library."
+msgstr "Tự động tải file media lên S.EE khi được thêm vào Thư viện media."
+
+msgid "Permission denied."
+msgstr "Không có quyền truy cập."
+
+msgid "Please enter an API key."
+msgstr "Vui lòng nhập API key."
+
+msgid "Connection successful!"
+msgstr "Kết nối thành công!"
+
+msgid "Connection failed: %s"
+msgstr "Kết nối thất bại: %s"
+
+msgid "Unexpected error: %s"
+msgstr "Lỗi không mong muốn: %s"
+
+msgid "No domains found. Please check your API key."
+msgstr "Không tìm thấy tên miền. Vui lòng kiểm tra API key."
+
+msgid "Domains refreshed."
+msgstr "Đã làm mới tên miền."
+
+msgid "S.EE Settings"
+msgstr "Cài đặt S.EE"
+
+msgid "S.EE"
+msgstr "S.EE"
+
+msgid "S.EE Management"
+msgstr "Quản lý S.EE"
+
+msgid "Settings"
+msgstr "Cài đặt"
+
+msgid "Short URL"
+msgstr "URL rút gọn"
+
+msgid "Copy"
+msgstr "Sao chép"
+
+msgid "Testing..."
+msgstr "Đang kiểm tra..."
+
+msgid "Copied!"
+msgstr "Đã sao chép!"
+
+msgid "Copy failed"
+msgstr "Sao chép thất bại"
+
+msgid "Generating..."
+msgstr "Đang tạo..."
+
+msgid "Deleting..."
+msgstr "Đang xóa..."
+
+msgid "Uploading..."
+msgstr "Đang tải lên..."
+
+msgid "Sharing..."
+msgstr "Đang chia sẻ..."
+
+msgid "Refreshing..."
+msgstr "Đang làm mới..."
+
+msgid "Are you sure you want to delete this?"
+msgstr "Bạn có chắc chắn muốn xóa không?"
+
+msgid ""
+"This will only remove the record from local history.\n"
+"\n"
+"The content on S.EE will NOT be deleted. If you need to delete the source file, please visit s.ee/user/links.\n"
+"\n"
+"Continue?"
+msgstr ""
+"Thao tác này chỉ xóa bản ghi khỏi lịch sử cục bộ.\n"
+"\n"
+"Nội dung trên S.EE sẽ KHÔNG bị xóa. Nếu bạn cần xóa file gốc, vui lòng truy cập s.ee/user/links.\n"
+"\n"
+"Tiếp tục?"
+
+msgid "Please configure your API key in S.EE settings first."
+msgstr "Vui lòng cấu hình API key trong phần cài đặt S.EE trước."
+
+msgid "Error"
+msgstr "Lỗi"
+
+msgid "You do not have permission to access this page."
+msgstr "Bạn không có quyền truy cập trang này."
+
+msgid "S.EE Short URL"
+msgstr "URL rút gọn S.EE"
+
+msgid "S.EE client not configured. Please set your API key."
+msgstr "S.EE chưa được cấu hình. Vui lòng thiết lập API key."
+
+msgid "Could not get post permalink."
+msgstr "Không thể lấy đường dẫn cố định của bài viết."
+
+msgid "No domain available. Please configure a default domain."
+msgstr "Không có tên miền khả dụng. Vui lòng thiết lập tên miền mặc định."
+
+msgid "Invalid post ID."
+msgstr "ID bài viết không hợp lệ."
+
+msgid "Short URL created successfully!"
+msgstr "Đã tạo URL rút gọn thành công!"
+
+msgid "No short URL found for this post."
+msgstr "Không tìm thấy URL rút gọn cho bài viết này."
+
+msgid "S.EE client not configured."
+msgstr "S.EE chưa được cấu hình."
+
+msgid "Short URL deleted successfully!"
+msgstr "Đã xóa URL rút gọn thành công!"
+
+msgid "S.EE URL"
+msgstr "URL S.EE"
+
+msgid "Delete from S.EE"
+msgstr "Xóa khỏi S.EE"
+
+msgid "Upload to S.EE"
+msgstr "Tải lên S.EE"
+
+msgid "Attachment file not found."
+msgstr "Không tìm thấy file đính kèm."
+
+msgid "Invalid attachment ID."
+msgstr "ID file đính kèm không hợp lệ."
+
+msgid "File uploaded to S.EE successfully!"
+msgstr "File đã được tải lên S.EE thành công!"
+
+msgid "Missing delete key."
+msgstr "Thiếu khóa xóa."
+
+msgid "File deleted from S.EE successfully!"
+msgstr "File đã được xóa khỏi S.EE thành công!"
+
+msgid "No file provided."
+msgstr "Chưa chọn file."
+
+msgid "File upload error."
+msgstr "Lỗi tải file lên."
+
+msgid "S.EE File Upload"
+msgstr "Tải file lên S.EE"
+
+msgid "File:"
+msgstr "File:"
+
+msgid "S.EE Text Share"
+msgstr "Chia sẻ văn bản S.EE"
+
+msgid "Content:"
+msgstr "Nội dung:"
+
+msgid "Title (optional):"
+msgstr "Tiêu đề (tùy chọn):"
+
+msgid "Type:"
+msgstr "Loại:"
+
+msgid "Plain Text"
+msgstr "Văn bản thuần"
+
+msgid "Markdown"
+msgstr "Markdown"
+
+msgid "Source Code"
+msgstr "Mã nguồn"
+
+msgid "Share Text"
+msgstr "Chia sẻ văn bản"
+
+msgid "Content cannot be empty."
+msgstr "Nội dung không được để trống."
+
+msgid "Text shared successfully!"
+msgstr "Đã chia sẻ văn bản thành công!"
+
+msgid "Missing domain or slug."
+msgstr "Thiếu tên miền hoặc slug."
+
+msgid "Text share deleted successfully!"
+msgstr "Đã xóa chia sẻ văn bản thành công!"
+
+msgid "Delete"
+msgstr "Xóa"
+
+msgid "Domain:"
+msgstr "Tên miền:"
+
+msgid "Custom slug (optional):"
+msgstr "Slug tùy chỉnh (tùy chọn):"
+
+msgid "Leave blank for auto-generated"
+msgstr "Để trống sẽ tự động tạo"
+
+msgid "Generate Short URL"
+msgstr "Tạo URL rút gọn"
+
+msgid "Text Share"
+msgstr "Chia sẻ văn bản"
+
+msgid "File Upload"
+msgstr "Tải file lên"
+
+msgid "Title"
+msgstr "Tiêu đề"
+
+msgid "Content"
+msgstr "Nội dung"
+
+msgid "Shared URL:"
+msgstr "URL chia sẻ:"
+
+msgid "Upload File"
+msgstr "Tải file lên"
+
+msgid "Drag & drop files here, or click to select files."
+msgstr "Kéo và thả file vào đây, hoặc nhấp để chọn file."
+
+msgid "Browse Files"
+msgstr "Chọn file"
+
+msgid "File URL:"
+msgstr "URL file:"
+
+msgid "Type"
+msgstr "Loại"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Date"
+msgstr "Ngày"
+
+msgid "Actions"
+msgstr "Thao tác"
+
+msgid "Filename"
+msgstr "Tên file"
+
+msgid "Text Share History"
+msgstr "Lịch sử chia sẻ văn bản"
+
+msgid "File Upload History"
+msgstr "Lịch sử tải file lên"
+
+msgid "Remove"
+msgstr "Xóa"
+
+msgid "History entry removed."
+msgstr "Đã xóa bản ghi lịch sử."
+
+msgid "Invalid entry."
+msgstr "Bản ghi không hợp lệ."

@@ -1,0 +1,350 @@
+# French translation for S.EE for WordPress.
+# Copyright (C) 2025 S.EE
+# This file is distributed under the same license as the S.EE for WordPress plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: S.EE for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/sdotee/see-wordpress\n"
+"POT-Creation-Date: 2025-01-01 00:00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00:00+0000\n"
+"Last-Translator: S.EE <dev@s.ee>\n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "API Configuration"
+msgstr "Configuration de l'API"
+
+msgid "Configure your S.EE API credentials. You can get your API key from your S.EE account settings."
+msgstr "Configurez vos identifiants API S.EE. Vous pouvez obtenir votre clé API dans les paramètres de votre compte S.EE."
+
+msgid "Note: API key is defined in wp-config.php via SEE_API_KEY constant and takes priority over the setting below."
+msgstr "Remarque : la clé API est définie dans wp-config.php via la constante SEE_API_KEY et prévaut sur le paramètre ci-dessous."
+
+msgid "API Key"
+msgstr "Clé API"
+
+msgid "API Base URL"
+msgstr "URL de base de l'API"
+
+msgid "Default Settings"
+msgstr "Paramètres par défaut"
+
+msgid "Choose default domains for short URLs, text sharing, and file uploads. Domain lists are cached and will not trigger API requests on page load."
+msgstr "Choisissez les domaines par défaut pour les URL courtes, le partage de texte et l'envoi de fichiers. Les listes de domaines sont mises en cache et ne déclenchent pas de requêtes API au chargement de la page."
+
+msgid "Click to fetch the latest domain lists from your S.EE account."
+msgstr "Cliquez pour récupérer les dernières listes de domaines depuis votre compte S.EE."
+
+msgid "Default Short URL Domain"
+msgstr "Domaine par défaut pour les URL courtes"
+
+msgid "Default File Upload Domain"
+msgstr "Domaine par défaut pour l'envoi de fichiers"
+
+msgid "Automation"
+msgstr "Automatisation"
+
+msgid "Enable automatic actions when publishing posts or uploading media."
+msgstr "Activer les actions automatiques lors de la publication d'articles ou de l'envoi de médias."
+
+msgid "Auto Shorten URLs"
+msgstr "Raccourcir les URL automatiquement"
+
+msgid "Auto Upload Media"
+msgstr "Envoyer les médias automatiquement"
+
+msgid "Show"
+msgstr "Afficher"
+
+msgid "Hide"
+msgstr "Masquer"
+
+msgid "Test Connection"
+msgstr "Tester la connexion"
+
+msgid "Enter your S.EE API key. It will be stored encrypted. %s"
+msgstr "Saisissez votre clé API S.EE. Elle sera stockée de manière chiffrée. %s"
+
+msgid "Get API Token"
+msgstr "Obtenir un jeton API"
+
+msgid "Default Text Share Domain"
+msgstr "Domaine par défaut pour le partage de texte"
+
+msgid "Default: https://s.ee/api/v1/"
+msgstr "Par défaut : https://s.ee/api/v1/"
+
+msgid "— Select Domain —"
+msgstr "— Sélectionner un domaine —"
+
+msgid "Refresh Domains"
+msgstr "Actualiser les domaines"
+
+msgid "Automatically generate a short URL when a post or page is published."
+msgstr "Générer automatiquement une URL courte lors de la publication d'un article ou d'une page."
+
+msgid "Automatically upload media files to S.EE when added to the Media Library."
+msgstr "Envoyer automatiquement les fichiers médias vers S.EE lors de leur ajout à la bibliothèque de médias."
+
+msgid "Permission denied."
+msgstr "Accès refusé."
+
+msgid "Please enter an API key."
+msgstr "Veuillez saisir une clé API."
+
+msgid "Connection successful!"
+msgstr "Connexion réussie !"
+
+msgid "Connection failed: %s"
+msgstr "Échec de la connexion : %s"
+
+msgid "Unexpected error: %s"
+msgstr "Erreur inattendue : %s"
+
+msgid "No domains found. Please check your API key."
+msgstr "Aucun domaine trouvé. Veuillez vérifier votre clé API."
+
+msgid "Domains refreshed."
+msgstr "Domaines actualisés."
+
+msgid "S.EE Settings"
+msgstr "Paramètres S.EE"
+
+msgid "S.EE"
+msgstr "S.EE"
+
+msgid "S.EE Management"
+msgstr "Gestion S.EE"
+
+msgid "Settings"
+msgstr "Paramètres"
+
+msgid "Short URL"
+msgstr "URL courte"
+
+msgid "Copy"
+msgstr "Copier"
+
+msgid "Testing..."
+msgstr "Test en cours..."
+
+msgid "Copied!"
+msgstr "Copié !"
+
+msgid "Copy failed"
+msgstr "Échec de la copie"
+
+msgid "Generating..."
+msgstr "Génération en cours..."
+
+msgid "Deleting..."
+msgstr "Suppression en cours..."
+
+msgid "Uploading..."
+msgstr "Envoi en cours..."
+
+msgid "Sharing..."
+msgstr "Partage en cours..."
+
+msgid "Refreshing..."
+msgstr "Actualisation en cours..."
+
+msgid "Are you sure you want to delete this?"
+msgstr "Voulez-vous vraiment supprimer cet élément ?"
+
+msgid ""
+"This will only remove the record from local history.\n"
+"\n"
+"The content on S.EE will NOT be deleted. If you need to delete the source file, please visit s.ee/user/links.\n"
+"\n"
+"Continue?"
+msgstr ""
+"Cette action supprimera uniquement l'entrée de l'historique local.\n"
+"\n"
+"Le contenu sur S.EE ne sera PAS supprimé. Si vous souhaitez supprimer le fichier source, rendez-vous sur s.ee/user/links.\n"
+"\n"
+"Continuer ?"
+
+msgid "Please configure your API key in S.EE settings first."
+msgstr "Veuillez d'abord configurer votre clé API dans les paramètres S.EE."
+
+msgid "Error"
+msgstr "Erreur"
+
+msgid "You do not have permission to access this page."
+msgstr "Vous n'avez pas la permission d'accéder à cette page."
+
+msgid "S.EE Short URL"
+msgstr "URL courte S.EE"
+
+msgid "S.EE client not configured. Please set your API key."
+msgstr "Client S.EE non configuré. Veuillez définir votre clé API."
+
+msgid "Could not get post permalink."
+msgstr "Impossible de récupérer le permalien de l'article."
+
+msgid "No domain available. Please configure a default domain."
+msgstr "Aucun domaine disponible. Veuillez configurer un domaine par défaut."
+
+msgid "Invalid post ID."
+msgstr "ID d'article invalide."
+
+msgid "Short URL created successfully!"
+msgstr "URL courte créée avec succès !"
+
+msgid "No short URL found for this post."
+msgstr "Aucune URL courte trouvée pour cet article."
+
+msgid "S.EE client not configured."
+msgstr "Client S.EE non configuré."
+
+msgid "Short URL deleted successfully!"
+msgstr "URL courte supprimée avec succès !"
+
+msgid "S.EE URL"
+msgstr "URL S.EE"
+
+msgid "Delete from S.EE"
+msgstr "Supprimer de S.EE"
+
+msgid "Upload to S.EE"
+msgstr "Envoyer vers S.EE"
+
+msgid "Attachment file not found."
+msgstr "Fichier joint introuvable."
+
+msgid "Invalid attachment ID."
+msgstr "ID de pièce jointe invalide."
+
+msgid "File uploaded to S.EE successfully!"
+msgstr "Fichier envoyé vers S.EE avec succès !"
+
+msgid "Missing delete key."
+msgstr "Clé de suppression manquante."
+
+msgid "File deleted from S.EE successfully!"
+msgstr "Fichier supprimé de S.EE avec succès !"
+
+msgid "No file provided."
+msgstr "Aucun fichier fourni."
+
+msgid "File upload error."
+msgstr "Erreur lors de l'envoi du fichier."
+
+msgid "S.EE File Upload"
+msgstr "Envoi de fichier S.EE"
+
+msgid "File:"
+msgstr "Fichier :"
+
+msgid "S.EE Text Share"
+msgstr "Partage de texte S.EE"
+
+msgid "Content:"
+msgstr "Contenu :"
+
+msgid "Title (optional):"
+msgstr "Titre (facultatif) :"
+
+msgid "Type:"
+msgstr "Type :"
+
+msgid "Plain Text"
+msgstr "Texte brut"
+
+msgid "Markdown"
+msgstr "Markdown"
+
+msgid "Source Code"
+msgstr "Code source"
+
+msgid "Share Text"
+msgstr "Partager le texte"
+
+msgid "Content cannot be empty."
+msgstr "Le contenu ne peut pas être vide."
+
+msgid "Text shared successfully!"
+msgstr "Texte partagé avec succès !"
+
+msgid "Missing domain or slug."
+msgstr "Domaine ou slug manquant."
+
+msgid "Text share deleted successfully!"
+msgstr "Partage de texte supprimé avec succès !"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Domain:"
+msgstr "Domaine :"
+
+msgid "Custom slug (optional):"
+msgstr "Slug personnalisé (facultatif) :"
+
+msgid "Leave blank for auto-generated"
+msgstr "Laisser vide pour une génération automatique"
+
+msgid "Generate Short URL"
+msgstr "Générer une URL courte"
+
+msgid "Text Share"
+msgstr "Partage de texte"
+
+msgid "File Upload"
+msgstr "Envoi de fichier"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Content"
+msgstr "Contenu"
+
+msgid "Shared URL:"
+msgstr "URL partagée :"
+
+msgid "Upload File"
+msgstr "Envoyer un fichier"
+
+msgid "Drag & drop files here, or click to select files."
+msgstr "Glissez-déposez vos fichiers ici, ou cliquez pour les sélectionner."
+
+msgid "Browse Files"
+msgstr "Parcourir les fichiers"
+
+msgid "File URL:"
+msgstr "URL du fichier :"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Filename"
+msgstr "Nom du fichier"
+
+msgid "Text Share History"
+msgstr "Historique des partages de texte"
+
+msgid "File Upload History"
+msgstr "Historique des envois de fichiers"
+
+msgid "Remove"
+msgstr "Retirer"
+
+msgid "History entry removed."
+msgstr "Entrée d'historique supprimée."
+
+msgid "Invalid entry."
+msgstr "Entrée invalide."

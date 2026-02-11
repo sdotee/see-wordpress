@@ -1,0 +1,19 @@
+{
+    "name": "sdotee/see-for-wordpress",
+    "description": "S.EE URL shortener, text sharing, and file hosting integration for WordPress.",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "sdotee/sdk": "dev-main"
+    },
+    "autoload": {
+        "classmap": [
+            "includes/"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

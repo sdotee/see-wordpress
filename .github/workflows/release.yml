@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          tools: composer:v2
+
+      - name: Install dependencies
+        run: composer install --no-dev --optimize-autoloader --working-dir=see
+
+      - name: Get version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Create release zip
+        run: |
+          cd see
+          zip -r "../see-${{ steps.version.outputs.VERSION }}.zip" . -x '.git/*'
+          cd ..
+          sha256sum "see-${{ steps.version.outputs.VERSION }}.zip" > "see-${{ steps.version.outputs.VERSION }}.zip.sha256"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            see-${{ steps.version.outputs.VERSION }}.zip
+            see-${{ steps.version.outputs.VERSION }}.zip.sha256
+          generate_release_notes: true

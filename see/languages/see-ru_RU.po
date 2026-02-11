@@ -1,0 +1,350 @@
+# Russian translation for S.EE for WordPress.
+# Copyright (C) 2025 S.EE
+# This file is distributed under the same license as the S.EE for WordPress plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: S.EE for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/sdotee/see-wordpress\n"
+"POT-Creation-Date: 2025-01-01 00:00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00:00+0000\n"
+"Last-Translator: S.EE <dev@s.ee>\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "API Configuration"
+msgstr "Настройка API"
+
+msgid "Configure your S.EE API credentials. You can get your API key from your S.EE account settings."
+msgstr "Настройте учётные данные API S.EE. API-ключ можно получить в настройках вашей учётной записи S.EE."
+
+msgid "Note: API key is defined in wp-config.php via SEE_API_KEY constant and takes priority over the setting below."
+msgstr "Примечание: API-ключ задан в wp-config.php через константу SEE_API_KEY и имеет приоритет над настройкой ниже."
+
+msgid "API Key"
+msgstr "API-ключ"
+
+msgid "API Base URL"
+msgstr "Базовый URL API"
+
+msgid "Default Settings"
+msgstr "Настройки по умолчанию"
+
+msgid "Choose default domains for short URLs, text sharing, and file uploads. Domain lists are cached and will not trigger API requests on page load."
+msgstr "Выберите домены по умолчанию для коротких ссылок, обмена текстом и загрузки файлов. Списки доменов кешируются и не вызывают запросы к API при загрузке страницы."
+
+msgid "Click to fetch the latest domain lists from your S.EE account."
+msgstr "Нажмите, чтобы получить актуальные списки доменов из вашей учётной записи S.EE."
+
+msgid "Default Short URL Domain"
+msgstr "Домен для коротких ссылок по умолчанию"
+
+msgid "Default File Upload Domain"
+msgstr "Домен для загрузки файлов по умолчанию"
+
+msgid "Automation"
+msgstr "Автоматизация"
+
+msgid "Enable automatic actions when publishing posts or uploading media."
+msgstr "Включить автоматические действия при публикации записей или загрузке медиафайлов."
+
+msgid "Auto Shorten URLs"
+msgstr "Автоматическое сокращение ссылок"
+
+msgid "Auto Upload Media"
+msgstr "Автоматическая загрузка медиафайлов"
+
+msgid "Show"
+msgstr "Показать"
+
+msgid "Hide"
+msgstr "Скрыть"
+
+msgid "Test Connection"
+msgstr "Проверить соединение"
+
+msgid "Enter your S.EE API key. It will be stored encrypted. %s"
+msgstr "Введите ваш API-ключ S.EE. Он будет храниться в зашифрованном виде. %s"
+
+msgid "Get API Token"
+msgstr "Получить API-токен"
+
+msgid "Default Text Share Domain"
+msgstr "Домен для обмена текстом по умолчанию"
+
+msgid "Default: https://s.ee/api/v1/"
+msgstr "По умолчанию: https://s.ee/api/v1/"
+
+msgid "— Select Domain —"
+msgstr "— Выберите домен —"
+
+msgid "Refresh Domains"
+msgstr "Обновить домены"
+
+msgid "Automatically generate a short URL when a post or page is published."
+msgstr "Автоматически создавать короткую ссылку при публикации записи или страницы."
+
+msgid "Automatically upload media files to S.EE when added to the Media Library."
+msgstr "Автоматически загружать медиафайлы в S.EE при добавлении в библиотеку медиафайлов."
+
+msgid "Permission denied."
+msgstr "Доступ запрещён."
+
+msgid "Please enter an API key."
+msgstr "Пожалуйста, введите API-ключ."
+
+msgid "Connection successful!"
+msgstr "Соединение установлено!"
+
+msgid "Connection failed: %s"
+msgstr "Ошибка соединения: %s"
+
+msgid "Unexpected error: %s"
+msgstr "Непредвиденная ошибка: %s"
+
+msgid "No domains found. Please check your API key."
+msgstr "Домены не найдены. Проверьте ваш API-ключ."
+
+msgid "Domains refreshed."
+msgstr "Домены обновлены."
+
+msgid "S.EE Settings"
+msgstr "Настройки S.EE"
+
+msgid "S.EE"
+msgstr "S.EE"
+
+msgid "S.EE Management"
+msgstr "Управление S.EE"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Short URL"
+msgstr "Короткая ссылка"
+
+msgid "Copy"
+msgstr "Копировать"
+
+msgid "Testing..."
+msgstr "Проверка..."
+
+msgid "Copied!"
+msgstr "Скопировано!"
+
+msgid "Copy failed"
+msgstr "Не удалось скопировать"
+
+msgid "Generating..."
+msgstr "Создание..."
+
+msgid "Deleting..."
+msgstr "Удаление..."
+
+msgid "Uploading..."
+msgstr "Загрузка..."
+
+msgid "Sharing..."
+msgstr "Отправка..."
+
+msgid "Refreshing..."
+msgstr "Обновление..."
+
+msgid "Are you sure you want to delete this?"
+msgstr "Вы уверены, что хотите удалить это?"
+
+msgid ""
+"This will only remove the record from local history.\n"
+"\n"
+"The content on S.EE will NOT be deleted. If you need to delete the source file, please visit s.ee/user/links.\n"
+"\n"
+"Continue?"
+msgstr ""
+"Это действие удалит запись только из локальной истории.\n"
+"\n"
+"Содержимое на S.EE НЕ будет удалено. Если нужно удалить исходный файл, перейдите на s.ee/user/links.\n"
+"\n"
+"Продолжить?"
+
+msgid "Please configure your API key in S.EE settings first."
+msgstr "Сначала настройте API-ключ в разделе настроек S.EE."
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "You do not have permission to access this page."
+msgstr "У вас нет прав для доступа к этой странице."
+
+msgid "S.EE Short URL"
+msgstr "Короткая ссылка S.EE"
+
+msgid "S.EE client not configured. Please set your API key."
+msgstr "Клиент S.EE не настроен. Укажите ваш API-ключ."
+
+msgid "Could not get post permalink."
+msgstr "Не удалось получить постоянную ссылку записи."
+
+msgid "No domain available. Please configure a default domain."
+msgstr "Нет доступных доменов. Настройте домен по умолчанию."
+
+msgid "Invalid post ID."
+msgstr "Недопустимый ID записи."
+
+msgid "Short URL created successfully!"
+msgstr "Короткая ссылка создана!"
+
+msgid "No short URL found for this post."
+msgstr "Короткая ссылка для этой записи не найдена."
+
+msgid "S.EE client not configured."
+msgstr "Клиент S.EE не настроен."
+
+msgid "Short URL deleted successfully!"
+msgstr "Короткая ссылка удалена!"
+
+msgid "S.EE URL"
+msgstr "Ссылка S.EE"
+
+msgid "Delete from S.EE"
+msgstr "Удалить из S.EE"
+
+msgid "Upload to S.EE"
+msgstr "Загрузить в S.EE"
+
+msgid "Attachment file not found."
+msgstr "Файл вложения не найден."
+
+msgid "Invalid attachment ID."
+msgstr "Недопустимый ID вложения."
+
+msgid "File uploaded to S.EE successfully!"
+msgstr "Файл загружен в S.EE!"
+
+msgid "Missing delete key."
+msgstr "Отсутствует ключ удаления."
+
+msgid "File deleted from S.EE successfully!"
+msgstr "Файл удалён из S.EE!"
+
+msgid "No file provided."
+msgstr "Файл не выбран."
+
+msgid "File upload error."
+msgstr "Ошибка загрузки файла."
+
+msgid "S.EE File Upload"
+msgstr "Загрузка файлов S.EE"
+
+msgid "File:"
+msgstr "Файл:"
+
+msgid "S.EE Text Share"
+msgstr "Обмен текстом S.EE"
+
+msgid "Content:"
+msgstr "Содержимое:"
+
+msgid "Title (optional):"
+msgstr "Заголовок (необязательно):"
+
+msgid "Type:"
+msgstr "Тип:"
+
+msgid "Plain Text"
+msgstr "Обычный текст"
+
+msgid "Markdown"
+msgstr "Markdown"
+
+msgid "Source Code"
+msgstr "Исходный код"
+
+msgid "Share Text"
+msgstr "Поделиться текстом"
+
+msgid "Content cannot be empty."
+msgstr "Содержимое не может быть пустым."
+
+msgid "Text shared successfully!"
+msgstr "Текст опубликован!"
+
+msgid "Missing domain or slug."
+msgstr "Отсутствует домен или идентификатор."
+
+msgid "Text share deleted successfully!"
+msgstr "Текстовая публикация удалена!"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Domain:"
+msgstr "Домен:"
+
+msgid "Custom slug (optional):"
+msgstr "Свой идентификатор (необязательно):"
+
+msgid "Leave blank for auto-generated"
+msgstr "Оставьте пустым для автоматической генерации"
+
+msgid "Generate Short URL"
+msgstr "Создать короткую ссылку"
+
+msgid "Text Share"
+msgstr "Обмен текстом"
+
+msgid "File Upload"
+msgstr "Загрузка файлов"
+
+msgid "Title"
+msgstr "Заголовок"
+
+msgid "Content"
+msgstr "Содержимое"
+
+msgid "Shared URL:"
+msgstr "Ссылка для обмена:"
+
+msgid "Upload File"
+msgstr "Загрузить файл"
+
+msgid "Drag & drop files here, or click to select files."
+msgstr "Перетащите файлы сюда или нажмите для выбора."
+
+msgid "Browse Files"
+msgstr "Выбрать файлы"
+
+msgid "File URL:"
+msgstr "Ссылка на файл:"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "URL"
+msgstr "Ссылка"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Filename"
+msgstr "Имя файла"
+
+msgid "Text Share History"
+msgstr "История обмена текстом"
+
+msgid "File Upload History"
+msgstr "История загрузки файлов"
+
+msgid "Remove"
+msgstr "Убрать"
+
+msgid "History entry removed."
+msgstr "Запись удалена из истории."
+
+msgid "Invalid entry."
+msgstr "Недопустимая запись."

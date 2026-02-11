@@ -1,0 +1,454 @@
+# Copyright (C) 2025 S.EE
+# This file is distributed under the same license as the S.EE for WordPress plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: S.EE for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/sdotee/see-wordpress\n"
+"POT-Creation-Date: 2025-01-01 00:00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/class-see-settings.php
+msgid "API Configuration"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Configure your S.EE API credentials. You can get your API key from your S.EE account settings."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Note: API key is defined in wp-config.php via SEE_API_KEY constant and takes priority over the setting below."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "API Key"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "API Base URL"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Default Settings"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Choose default domains for short URLs, text sharing, and file uploads. Domain lists are cached and will not trigger API requests on page load."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Click to fetch the latest domain lists from your S.EE account."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Default Short URL Domain"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Default File Upload Domain"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Automation"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Enable automatic actions when publishing posts or uploading media."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Auto Shorten URLs"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Auto Upload Media"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Show"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Test Connection"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Enter your S.EE API key. It will be stored encrypted. %s"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Get API Token"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Default Text Share Domain"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Default: https://s.ee/api/v1/"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "— Select Domain —"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Refresh Domains"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Automatically generate a short URL when a post or page is published."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Automatically upload media files to S.EE when added to the Media Library."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Permission denied."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Please enter an API key."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Connection successful!"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Connection failed: %s"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Unexpected error: %s"
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "No domains found. Please check your API key."
+msgstr ""
+
+#: includes/class-see-settings.php
+msgid "Domains refreshed."
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "S.EE Settings"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "S.EE"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "S.EE Management"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Settings"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Short URL"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Copy"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Testing..."
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Copied!"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Copy failed"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Generating..."
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Deleting..."
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Uploading..."
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Sharing..."
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Refreshing..."
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Are you sure you want to delete this?"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid ""
+"This will only remove the record from local history.\n"
+"\n"
+"The content on S.EE will NOT be deleted. If you need to delete the source file, please visit s.ee/user/links.\n"
+"\n"
+"Continue?"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Please configure your API key in S.EE settings first."
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Error"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "Hide"
+msgstr ""
+
+#: includes/class-see-admin.php
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: includes/class-see-shorturl.php
+msgid "S.EE Short URL"
+msgstr ""
+
+#: includes/class-see-shorturl.php
+msgid "S.EE client not configured. Please set your API key."
+msgstr ""
+
+#: includes/class-see-shorturl.php
+msgid "Could not get post permalink."
+msgstr ""
+
+#: includes/class-see-shorturl.php
+msgid "No domain available. Please configure a default domain."
+msgstr ""
+
+#: includes/class-see-shorturl.php
+msgid "Invalid post ID."
+msgstr ""
+
+#: includes/class-see-shorturl.php
+msgid "Short URL created successfully!"
+msgstr ""
+
+#: includes/class-see-shorturl.php
+msgid "No short URL found for this post."
+msgstr ""
+
+#: includes/class-see-shorturl.php
+msgid "S.EE client not configured."
+msgstr ""
+
+#: includes/class-see-shorturl.php
+msgid "Short URL deleted successfully!"
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "S.EE URL"
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "Delete from S.EE"
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "Upload to S.EE"
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "Attachment file not found."
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "Invalid attachment ID."
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "File uploaded to S.EE successfully!"
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "Missing delete key."
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "File deleted from S.EE successfully!"
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "No file provided."
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "File upload error."
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "S.EE File Upload"
+msgstr ""
+
+#: includes/class-see-file.php
+msgid "File:"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "S.EE Text Share"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Content:"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Title (optional):"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Type:"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Plain Text"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Markdown"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Source Code"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Share Text"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Content cannot be empty."
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Text shared successfully!"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Missing domain or slug."
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Text share deleted successfully!"
+msgstr ""
+
+#: includes/class-see-text.php
+msgid "Delete"
+msgstr ""
+
+#: admin/views/settings-page.php
+msgid "S.EE Settings"
+msgstr ""
+
+#: admin/views/shorturl-metabox.php
+msgid "Domain:"
+msgstr ""
+
+#: admin/views/shorturl-metabox.php
+msgid "Custom slug (optional):"
+msgstr ""
+
+#: admin/views/shorturl-metabox.php
+msgid "Leave blank for auto-generated"
+msgstr ""
+
+#: admin/views/shorturl-metabox.php
+msgid "Generate Short URL"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Text Share"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "File Upload"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Title"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Content"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Shared URL:"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Upload File"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Drag & drop files here, or click to select files."
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Browse Files"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "File URL:"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Type"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "URL"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Date"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Actions"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Filename"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Text Share History"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "File Upload History"
+msgstr ""
+
+#: admin/views/management-page.php
+msgid "Remove"
+msgstr ""
+
+#: includes/class-see-text.php includes/class-see-file.php
+msgid "History entry removed."
+msgstr ""
+
+#: includes/class-see-text.php includes/class-see-file.php
+msgid "Invalid entry."
+msgstr ""

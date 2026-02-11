@@ -1,0 +1,350 @@
+# Korean translation for S.EE for WordPress.
+# Copyright (C) 2025 S.EE
+# This file is distributed under the same license as the S.EE for WordPress plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: S.EE for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/sdotee/see-wordpress\n"
+"POT-Creation-Date: 2025-01-01 00:00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00:00+0000\n"
+"Last-Translator: S.EE <dev@s.ee>\n"
+"Language-Team: Korean\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "API Configuration"
+msgstr "API 설정"
+
+msgid "Configure your S.EE API credentials. You can get your API key from your S.EE account settings."
+msgstr "S.EE API 인증 정보를 설정하세요. API 키는 S.EE 계정 설정에서 확인할 수 있습니다."
+
+msgid "Note: API key is defined in wp-config.php via SEE_API_KEY constant and takes priority over the setting below."
+msgstr "참고: API 키가 wp-config.php의 SEE_API_KEY 상수로 정의되어 있으며, 아래 설정보다 우선 적용됩니다."
+
+msgid "API Key"
+msgstr "API 키"
+
+msgid "API Base URL"
+msgstr "API 기본 URL"
+
+msgid "Default Settings"
+msgstr "기본 설정"
+
+msgid "Choose default domains for short URLs, text sharing, and file uploads. Domain lists are cached and will not trigger API requests on page load."
+msgstr "단축 URL, 텍스트 공유, 파일 업로드에 사용할 기본 도메인을 선택하세요. 도메인 목록은 캐시되며 페이지 로드 시 API 요청이 발생하지 않습니다."
+
+msgid "Click to fetch the latest domain lists from your S.EE account."
+msgstr "클릭하여 S.EE 계정에서 최신 도메인 목록을 가져옵니다."
+
+msgid "Default Short URL Domain"
+msgstr "기본 단축 URL 도메인"
+
+msgid "Default File Upload Domain"
+msgstr "기본 파일 업로드 도메인"
+
+msgid "Automation"
+msgstr "자동화"
+
+msgid "Enable automatic actions when publishing posts or uploading media."
+msgstr "글 게시 또는 미디어 업로드 시 자동 작업을 활성화합니다."
+
+msgid "Auto Shorten URLs"
+msgstr "URL 자동 단축"
+
+msgid "Auto Upload Media"
+msgstr "미디어 자동 업로드"
+
+msgid "Show"
+msgstr "표시"
+
+msgid "Hide"
+msgstr "숨기기"
+
+msgid "Test Connection"
+msgstr "연결 테스트"
+
+msgid "Enter your S.EE API key. It will be stored encrypted. %s"
+msgstr "S.EE API 키를 입력하세요. 암호화되어 저장됩니다. %s"
+
+msgid "Get API Token"
+msgstr "API 토큰 받기"
+
+msgid "Default Text Share Domain"
+msgstr "기본 텍스트 공유 도메인"
+
+msgid "Default: https://s.ee/api/v1/"
+msgstr "기본값: https://s.ee/api/v1/"
+
+msgid "— Select Domain —"
+msgstr "— 도메인 선택 —"
+
+msgid "Refresh Domains"
+msgstr "도메인 새로고침"
+
+msgid "Automatically generate a short URL when a post or page is published."
+msgstr "글 또는 페이지 게시 시 단축 URL을 자동으로 생성합니다."
+
+msgid "Automatically upload media files to S.EE when added to the Media Library."
+msgstr "미디어 라이브러리에 추가된 파일을 자동으로 S.EE에 업로드합니다."
+
+msgid "Permission denied."
+msgstr "권한이 없습니다."
+
+msgid "Please enter an API key."
+msgstr "API 키를 입력하세요."
+
+msgid "Connection successful!"
+msgstr "연결 성공!"
+
+msgid "Connection failed: %s"
+msgstr "연결 실패: %s"
+
+msgid "Unexpected error: %s"
+msgstr "예기치 않은 오류: %s"
+
+msgid "No domains found. Please check your API key."
+msgstr "도메인을 찾을 수 없습니다. API 키를 확인하세요."
+
+msgid "Domains refreshed."
+msgstr "도메인이 새로고침되었습니다."
+
+msgid "S.EE Settings"
+msgstr "S.EE 설정"
+
+msgid "S.EE"
+msgstr "S.EE"
+
+msgid "S.EE Management"
+msgstr "S.EE 관리"
+
+msgid "Settings"
+msgstr "설정"
+
+msgid "Short URL"
+msgstr "단축 URL"
+
+msgid "Copy"
+msgstr "복사"
+
+msgid "Testing..."
+msgstr "테스트 중..."
+
+msgid "Copied!"
+msgstr "복사됨!"
+
+msgid "Copy failed"
+msgstr "복사 실패"
+
+msgid "Generating..."
+msgstr "생성 중..."
+
+msgid "Deleting..."
+msgstr "삭제 중..."
+
+msgid "Uploading..."
+msgstr "업로드 중..."
+
+msgid "Sharing..."
+msgstr "공유 중..."
+
+msgid "Refreshing..."
+msgstr "새로고침 중..."
+
+msgid "Are you sure you want to delete this?"
+msgstr "정말 삭제하시겠습니까?"
+
+msgid ""
+"This will only remove the record from local history.\n"
+"\n"
+"The content on S.EE will NOT be deleted. If you need to delete the source file, please visit s.ee/user/links.\n"
+"\n"
+"Continue?"
+msgstr ""
+"이 작업은 로컬 기록에서만 삭제됩니다.\n"
+"\n"
+"S.EE의 콘텐츠는 삭제되지 않습니다. 원본 파일을 삭제하려면 s.ee/user/links를 방문하세요.\n"
+"\n"
+"계속하시겠습니까?"
+
+msgid "Please configure your API key in S.EE settings first."
+msgstr "먼저 S.EE 설정에서 API 키를 설정하세요."
+
+msgid "Error"
+msgstr "오류"
+
+msgid "You do not have permission to access this page."
+msgstr "이 페이지에 접근할 권한이 없습니다."
+
+msgid "S.EE Short URL"
+msgstr "S.EE 단축 URL"
+
+msgid "S.EE client not configured. Please set your API key."
+msgstr "S.EE 클라이언트가 설정되지 않았습니다. API 키를 설정하세요."
+
+msgid "Could not get post permalink."
+msgstr "글의 고유주소를 가져올 수 없습니다."
+
+msgid "No domain available. Please configure a default domain."
+msgstr "사용 가능한 도메인이 없습니다. 기본 도메인을 설정하세요."
+
+msgid "Invalid post ID."
+msgstr "잘못된 글 ID입니다."
+
+msgid "Short URL created successfully!"
+msgstr "단축 URL이 생성되었습니다!"
+
+msgid "No short URL found for this post."
+msgstr "이 글의 단축 URL을 찾을 수 없습니다."
+
+msgid "S.EE client not configured."
+msgstr "S.EE 클라이언트가 설정되지 않았습니다."
+
+msgid "Short URL deleted successfully!"
+msgstr "단축 URL이 삭제되었습니다!"
+
+msgid "S.EE URL"
+msgstr "S.EE URL"
+
+msgid "Delete from S.EE"
+msgstr "S.EE에서 삭제"
+
+msgid "Upload to S.EE"
+msgstr "S.EE에 업로드"
+
+msgid "Attachment file not found."
+msgstr "첨부 파일을 찾을 수 없습니다."
+
+msgid "Invalid attachment ID."
+msgstr "잘못된 첨부 파일 ID입니다."
+
+msgid "File uploaded to S.EE successfully!"
+msgstr "파일이 S.EE에 업로드되었습니다!"
+
+msgid "Missing delete key."
+msgstr "삭제 키가 없습니다."
+
+msgid "File deleted from S.EE successfully!"
+msgstr "파일이 S.EE에서 삭제되었습니다!"
+
+msgid "No file provided."
+msgstr "파일이 제공되지 않았습니다."
+
+msgid "File upload error."
+msgstr "파일 업로드 오류가 발생했습니다."
+
+msgid "S.EE File Upload"
+msgstr "S.EE 파일 업로드"
+
+msgid "File:"
+msgstr "파일:"
+
+msgid "S.EE Text Share"
+msgstr "S.EE 텍스트 공유"
+
+msgid "Content:"
+msgstr "내용:"
+
+msgid "Title (optional):"
+msgstr "제목 (선택사항):"
+
+msgid "Type:"
+msgstr "유형:"
+
+msgid "Plain Text"
+msgstr "일반 텍스트"
+
+msgid "Markdown"
+msgstr "Markdown"
+
+msgid "Source Code"
+msgstr "소스 코드"
+
+msgid "Share Text"
+msgstr "텍스트 공유"
+
+msgid "Content cannot be empty."
+msgstr "내용을 입력하세요."
+
+msgid "Text shared successfully!"
+msgstr "텍스트가 공유되었습니다!"
+
+msgid "Missing domain or slug."
+msgstr "도메인 또는 슬러그가 없습니다."
+
+msgid "Text share deleted successfully!"
+msgstr "텍스트 공유가 삭제되었습니다!"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Domain:"
+msgstr "도메인:"
+
+msgid "Custom slug (optional):"
+msgstr "사용자 지정 슬러그 (선택사항):"
+
+msgid "Leave blank for auto-generated"
+msgstr "비워두면 자동 생성됩니다"
+
+msgid "Generate Short URL"
+msgstr "단축 URL 생성"
+
+msgid "Text Share"
+msgstr "텍스트 공유"
+
+msgid "File Upload"
+msgstr "파일 업로드"
+
+msgid "Title"
+msgstr "제목"
+
+msgid "Content"
+msgstr "내용"
+
+msgid "Shared URL:"
+msgstr "공유 URL:"
+
+msgid "Upload File"
+msgstr "파일 업로드"
+
+msgid "Drag & drop files here, or click to select files."
+msgstr "여기에 파일을 드래그 앤 드롭하거나 클릭하여 선택하세요."
+
+msgid "Browse Files"
+msgstr "파일 찾아보기"
+
+msgid "File URL:"
+msgstr "파일 URL:"
+
+msgid "Type"
+msgstr "유형"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Date"
+msgstr "날짜"
+
+msgid "Actions"
+msgstr "작업"
+
+msgid "Filename"
+msgstr "파일명"
+
+msgid "Text Share History"
+msgstr "텍스트 공유 기록"
+
+msgid "File Upload History"
+msgstr "파일 업로드 기록"
+
+msgid "Remove"
+msgstr "삭제"
+
+msgid "History entry removed."
+msgstr "기록이 삭제되었습니다."
+
+msgid "Invalid entry."
+msgstr "잘못된 항목입니다."

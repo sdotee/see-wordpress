@@ -1,0 +1,245 @@
+/**
+ * S.EE Admin Styles
+ *
+ * @package SEE
+ */
+
+/* Settings page */
+.see-settings-page .see-api-key-wrap {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.see-settings-page .see-api-key-wrap input {
+	flex: 0 1 300px;
+}
+
+#see-connection-status {
+	font-weight: 600;
+	margin-left: 4px;
+}
+
+#see-connection-status.see-status-success {
+	color: #00a32a;
+}
+
+#see-connection-status.see-status-error {
+	color: #d63638;
+}
+
+#see-domains-status {
+	font-weight: 600;
+	margin-left: 4px;
+}
+
+/* Meta boxes */
+.see-shorturl-metabox,
+.see-text-metabox,
+.see-file-metabox {
+	padding: 4px 0;
+}
+
+.see-shorturl-result,
+.see-text-result,
+.see-file-result {
+	margin-bottom: 8px;
+}
+
+.see-short-url-link {
+	word-break: break-all;
+}
+
+.see-shorturl-display {
+	margin: 4px 0 8px;
+}
+
+.see-shorturl-actions,
+.see-text-actions,
+.see-file-actions {
+	display: flex;
+	gap: 4px;
+	margin-top: 8px;
+}
+
+.see-shorturl-form label,
+.see-text-metabox label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.see-text-metabox p,
+.see-shorturl-form p {
+	margin: 8px 0;
+}
+
+.see-text-metabox select,
+.see-text-metabox input,
+.see-text-metabox textarea,
+.see-shorturl-form select,
+.see-shorturl-form input {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 4px;
+}
+
+.see-shorturl-status,
+.see-text-status {
+	display: inline-block;
+	margin-left: 8px;
+}
+
+/* Post list column */
+.column-see_short_url {
+	width: 200px;
+}
+
+.column-see_short_url .see-short-url-link {
+	font-size: 12px;
+	word-break: break-all;
+}
+
+.column-see_short_url .see-copy-btn {
+	color: #2271b1;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.column-see_short_url .see-copy-btn:hover {
+	color: #135e96;
+}
+
+.column-see_short_url .see-copy-btn .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.see-no-url {
+	color: #999;
+}
+
+/* Management page tabs */
+.see-management-tabs .nav-tab-wrapper {
+	margin-bottom: 16px;
+}
+
+.see-tab-content {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-top: none;
+	padding: 16px 20px;
+}
+
+/* Dropzone */
+.see-dropzone {
+	border: 2px dashed #c3c4c7;
+	border-radius: 4px;
+	padding: 40px 20px;
+	text-align: center;
+	cursor: pointer;
+	transition: border-color 0.2s, background-color 0.2s;
+	margin: 16px 0;
+}
+
+.see-dropzone:hover,
+.see-dropzone.see-dragover {
+	border-color: #2271b1;
+	background-color: #f0f6fc;
+}
+
+.see-dropzone p {
+	margin: 0 0 12px;
+	color: #646970;
+	font-size: 14px;
+}
+
+/* Result boxes */
+.see-result-box {
+	background: #f0f6fc;
+	border: 1px solid #c3c4c7;
+	border-left: 4px solid #2271b1;
+	padding: 12px 16px;
+	margin: 12px 0;
+	border-radius: 2px;
+}
+
+.see-result-box a {
+	word-break: break-all;
+	margin-right: 8px;
+}
+
+/* Attachment fields */
+.see-attachment-field {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.see-attachment-field a {
+	word-break: break-all;
+}
+
+/* Upload status */
+.see-upload-status {
+	margin-left: 8px;
+	font-style: italic;
+}
+
+/* Spinner */
+.see-spinner {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #c3c4c7;
+	border-top-color: #2271b1;
+	border-radius: 50%;
+	animation: see-spin 0.6s linear infinite;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+@keyframes see-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Sidebar file upload meta box */
+.see-file-metabox .see-file-url {
+	margin: 4px 0 8px;
+}
+
+.see-file-metabox .see-file-url a {
+	word-break: break-all;
+}
+
+.see-file-metabox .see-file-name {
+	margin: 4px 0;
+	word-break: break-all;
+}
+
+.see-format-copy-group {
+	display: flex;
+	gap: 4px;
+	flex-wrap: wrap;
+}
+
+.see-sidebar-file-status {
+	display: inline-block;
+	margin-left: 8px;
+}
+
+.see-sidebar-file-form p {
+	margin: 8px 0;
+}
+
+.see-sidebar-file-input {
+	width: 100%;
+	max-width: 100%;
+}
