@@ -3,8 +3,8 @@ Contributors: sdotee
 Tags: url shortener, short url, file upload, text share, s.ee
 Requires at least: 6.0
 Tested up to: 6.9
-Requires PHP: 8.1
-Stable tag: 1.0.0
+Requires PHP: 8.2
+Stable tag: 1.0.1
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -26,7 +26,7 @@ Bring the power of the S.EE platform directly into your dashboard. Shorten URLs,
 
 **Requirements:**
 
-* PHP 8.1 or higher
+* PHP 8.2 or higher
 * WordPress 6.0 or higher
 * An S.EE account and API key
 
@@ -64,6 +64,9 @@ Posts and Pages are supported by default.
 
 == Changelog ==
 
+= 1.0.1 =
+* Bump minimum PHP version from 8.1 to 8.2 (PHP 8.1 has reached end of life).
+
 = 1.0.0 =
 * Initial release.
 * URL shortening with meta box and auto-shorten support.
@@ -75,6 +78,9 @@ Posts and Pages are supported by default.
 * Full i18n support with 13 languages: English, 简体中文, 繁體中文, 日本語, 한국어, Bahasa Indonesia, Tiếng Việt, Deutsch, Français, Español, Português, Português do Brasil, and Русский.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Minimum PHP version bumped to 8.2.
 
 = 1.0.0 =
 Initial release.

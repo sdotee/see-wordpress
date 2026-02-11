@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 WordPress plugin for S.EE platform integration — URL shortening, text sharing, and file hosting. The plugin source lives in the `see/` subdirectory.
 
-- **PHP 8.1+** with typed properties and return types
+- **PHP 8.2+** with typed properties and return types
 - **WordPress 6.0+**, follows WordPress coding standards
 - **Text Domain:** `see`
 - **License:** MIT

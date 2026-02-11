@@ -20,7 +20,7 @@ Integrate [S.EE](https://s.ee) URL shortener, text sharing, and file hosting int
 
 ## Requirements
 
-- PHP 8.1+
+- PHP 8.2+
 - WordPress 6.0+
 - An [S.EE](https://s.ee) account and API key
 
