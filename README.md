@@ -26,12 +26,18 @@ Integrate [S.EE](https://s.ee) URL shortener, text sharing, and file hosting int
 
 ## Installation
 
-1. Download the [latest release](https://github.com/sdotee/see-wordpress/releases) and upload the `see` folder to `/wp-content/plugins/`, or install via Composer:
-   ```bash
-   cd wp-content/plugins/see
-   composer install
-   ```
-2. Activate the plugin in **Plugins > Installed Plugins**.
+**Option A** - Download the `see-x.x.x.zip` from the [latest release](https://github.com/sdotee/see-wordpress/releases), then go to **Plugins > Add New > Upload Plugin** in your WordPress admin and upload the zip file.
+
+**Option B** - Install from source:
+```bash
+git clone https://github.com/sdotee/see-wordpress.git
+cp -r see-wordpress/see wp-content/plugins/
+cd wp-content/plugins/see
+composer install
+```
+
+Then:
+1. Activate the plugin in **Plugins > Installed Plugins**.
 3. Go to **Settings > S.EE** and enter your API key.
 4. Click **Test Connection** to verify.
 5. Select your default domains and configure automation options.
