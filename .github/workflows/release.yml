@@ -22,7 +22,7 @@ jobs:
           tools: composer:v2
 
       - name: Install dependencies
-        run: composer install --no-dev --optimize-autoloader --working-dir=see
+        run: composer install --no-dev --optimize-autoloader --working-dir=sdotee
 
       - name: Get version from tag
         id: version
@@ -30,15 +30,15 @@ jobs:
 
       - name: Create release zip
         run: |
-          cd see
-          zip -r "../see-${{ steps.version.outputs.VERSION }}.zip" . -x '.git/*'
+          cd sdotee
+          zip -r "../sdotee-${{ steps.version.outputs.VERSION }}.zip" . -x '.git/*'
           cd ..
-          sha256sum "see-${{ steps.version.outputs.VERSION }}.zip" > "see-${{ steps.version.outputs.VERSION }}.zip.sha256"
+          sha256sum "sdotee-${{ steps.version.outputs.VERSION }}.zip" > "sdotee-${{ steps.version.outputs.VERSION }}.zip.sha256"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            see-${{ steps.version.outputs.VERSION }}.zip
-            see-${{ steps.version.outputs.VERSION }}.zip.sha256
+            sdotee-${{ steps.version.outputs.VERSION }}.zip
+            sdotee-${{ steps.version.outputs.VERSION }}.zip.sha256
           generate_release_notes: true

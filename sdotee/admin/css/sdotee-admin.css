@@ -1,0 +1,245 @@
+/**
+ * S.EE Admin Styles
+ *
+ * @package SDOTEE
+ */
+
+/* Settings page */
+.sdotee-settings-page .sdotee-api-key-wrap {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.sdotee-settings-page .sdotee-api-key-wrap input {
+	flex: 0 1 300px;
+}
+
+#sdotee-connection-status {
+	font-weight: 600;
+	margin-left: 4px;
+}
+
+#sdotee-connection-status.sdotee-status-success {
+	color: #00a32a;
+}
+
+#sdotee-connection-status.sdotee-status-error {
+	color: #d63638;
+}
+
+#sdotee-domains-status {
+	font-weight: 600;
+	margin-left: 4px;
+}
+
+/* Meta boxes */
+.sdotee-shorturl-metabox,
+.sdotee-text-metabox,
+.sdotee-file-metabox {
+	padding: 4px 0;
+}
+
+.sdotee-shorturl-result,
+.sdotee-text-result,
+.sdotee-file-result {
+	margin-bottom: 8px;
+}
+
+.sdotee-short-url-link {
+	word-break: break-all;
+}
+
+.sdotee-shorturl-display {
+	margin: 4px 0 8px;
+}
+
+.sdotee-shorturl-actions,
+.sdotee-text-actions,
+.sdotee-file-actions {
+	display: flex;
+	gap: 4px;
+	margin-top: 8px;
+}
+
+.sdotee-shorturl-form label,
+.sdotee-text-metabox label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.sdotee-text-metabox p,
+.sdotee-shorturl-form p {
+	margin: 8px 0;
+}
+
+.sdotee-text-metabox select,
+.sdotee-text-metabox input,
+.sdotee-text-metabox textarea,
+.sdotee-shorturl-form select,
+.sdotee-shorturl-form input {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 4px;
+}
+
+.sdotee-shorturl-status,
+.sdotee-text-status {
+	display: inline-block;
+	margin-left: 8px;
+}
+
+/* Post list column */
+.column-sdotee_short_url {
+	width: 200px;
+}
+
+.column-sdotee_short_url .sdotee-short-url-link {
+	font-size: 12px;
+	word-break: break-all;
+}
+
+.column-sdotee_short_url .sdotee-copy-btn {
+	color: #2271b1;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.column-sdotee_short_url .sdotee-copy-btn:hover {
+	color: #135e96;
+}
+
+.column-sdotee_short_url .sdotee-copy-btn .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.sdotee-no-url {
+	color: #999;
+}
+
+/* Management page tabs */
+.sdotee-management-tabs .nav-tab-wrapper {
+	margin-bottom: 16px;
+}
+
+.sdotee-tab-content {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-top: none;
+	padding: 16px 20px;
+}
+
+/* Dropzone */
+.sdotee-dropzone {
+	border: 2px dashed #c3c4c7;
+	border-radius: 4px;
+	padding: 40px 20px;
+	text-align: center;
+	cursor: pointer;
+	transition: border-color 0.2s, background-color 0.2s;
+	margin: 16px 0;
+}
+
+.sdotee-dropzone:hover,
+.sdotee-dropzone.sdotee-dragover {
+	border-color: #2271b1;
+	background-color: #f0f6fc;
+}
+
+.sdotee-dropzone p {
+	margin: 0 0 12px;
+	color: #646970;
+	font-size: 14px;
+}
+
+/* Result boxes */
+.sdotee-result-box {
+	background: #f0f6fc;
+	border: 1px solid #c3c4c7;
+	border-left: 4px solid #2271b1;
+	padding: 12px 16px;
+	margin: 12px 0;
+	border-radius: 2px;
+}
+
+.sdotee-result-box a {
+	word-break: break-all;
+	margin-right: 8px;
+}
+
+/* Attachment fields */
+.sdotee-attachment-field {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.sdotee-attachment-field a {
+	word-break: break-all;
+}
+
+/* Upload status */
+.sdotee-upload-status {
+	margin-left: 8px;
+	font-style: italic;
+}
+
+/* Spinner */
+.sdotee-spinner {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #c3c4c7;
+	border-top-color: #2271b1;
+	border-radius: 50%;
+	animation: sdotee-spin 0.6s linear infinite;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+@keyframes sdotee-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Sidebar file upload meta box */
+.sdotee-file-metabox .sdotee-file-url {
+	margin: 4px 0 8px;
+}
+
+.sdotee-file-metabox .sdotee-file-url a {
+	word-break: break-all;
+}
+
+.sdotee-file-metabox .sdotee-file-name {
+	margin: 4px 0;
+	word-break: break-all;
+}
+
+.sdotee-format-copy-group {
+	display: flex;
+	gap: 4px;
+	flex-wrap: wrap;
+}
+
+.sdotee-sidebar-file-status {
+	display: inline-block;
+	margin-left: 8px;
+}
+
+.sdotee-sidebar-file-form p {
+	margin: 8px 0;
+}
+
+.sdotee-sidebar-file-input {
+	width: 100%;
+	max-width: 100%;
+}

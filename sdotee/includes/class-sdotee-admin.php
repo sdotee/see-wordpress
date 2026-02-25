@@ -1,0 +1,189 @@
+<?php
+/**
+ * Admin menu and pages.
+ *
+ * @package SDOTEE
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Class SDOTEE_Admin
+ *
+ * Registers admin menus, enqueues scripts/styles, adds columns to post lists.
+ */
+class SDOTEE_Admin {
+
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+		add_action( 'admin_menu', array( $this, 'register_menus' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_assets' ) );
+		add_filter( 'plugin_action_links_' . SDOTEE_PLUGIN_BASENAME, array( $this, 'plugin_action_links' ) );
+
+		// Post list columns.
+		add_filter( 'manage_posts_columns', array( $this, 'add_shorturl_column' ) );
+		add_action( 'manage_posts_custom_column', array( $this, 'render_shorturl_column' ), 10, 2 );
+		add_filter( 'manage_pages_columns', array( $this, 'add_shorturl_column' ) );
+		add_action( 'manage_pages_custom_column', array( $this, 'render_shorturl_column' ), 10, 2 );
+	}
+
+	/**
+	 * Register admin menus.
+	 */
+	public function register_menus(): void {
+		// Settings page under Settings menu.
+		add_options_page(
+			__( 'S.EE Settings', 'sdotee' ),
+			__( 'S.EE', 'sdotee' ),
+			'manage_options',
+			'sdotee-settings',
+			array( $this, 'render_settings_page' )
+		);
+
+		// Management page under Tools menu.
+		add_management_page(
+			__( 'S.EE Management', 'sdotee' ),
+			__( 'S.EE', 'sdotee' ),
+			'edit_posts',
+			'sdotee-management',
+			array( $this, 'render_management_page' )
+		);
+	}
+
+	/**
+	 * Enqueue admin CSS and JS only on relevant pages.
+	 *
+	 * @param string $hook_suffix Current admin page hook suffix.
+	 */
+	public function enqueue_assets( string $hook_suffix ): void {
+		// Pages where we load our assets.
+		$sdotee_pages = array(
+			'settings_page_sdotee-settings',
+			'tools_page_sdotee-management',
+			'post.php',
+			'post-new.php',
+			'upload.php',
+			'post.php',
+		);
+
+		$screen = get_current_screen();
+
+		// Also load on edit.php (post lists) for the short URL column.
+		$is_post_list = $screen && 'edit' === $screen->base;
+
+		if ( ! in_array( $hook_suffix, $sdotee_pages, true ) && ! $is_post_list ) {
+			// Check if it's an attachment edit page.
+			if ( ! $screen || 'attachment' !== $screen->post_type ) {
+				return;
+			}
+		}
+
+		wp_enqueue_style(
+			'sdotee-admin-css',
+			SDOTEE_PLUGIN_URL . 'admin/css/sdotee-admin.css',
+			array(),
+			SDOTEE_VERSION
+		);
+
+		wp_enqueue_script(
+			'sdotee-admin-js',
+			SDOTEE_PLUGIN_URL . 'admin/js/sdotee-admin.js',
+			array( 'jquery' ),
+			SDOTEE_VERSION,
+			true
+		);
+
+		wp_localize_script( 'sdotee-admin-js', 'sdoteeAdmin', array(
+			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+			'nonce'   => wp_create_nonce( 'sdotee_admin_nonce' ),
+			'i18n'    => array(
+				'testing'          => __( 'Testing...', 'sdotee' ),
+				'success'          => __( 'Connection successful!', 'sdotee' ),
+				'error'            => __( 'Error', 'sdotee' ),
+				'copied'           => __( 'Copied!', 'sdotee' ),
+				'copyFailed'       => __( 'Copy failed', 'sdotee' ),
+				'generating'       => __( 'Generating...', 'sdotee' ),
+				'deleting'         => __( 'Deleting...', 'sdotee' ),
+				'uploading'        => __( 'Uploading...', 'sdotee' ),
+				'sharing'          => __( 'Sharing...', 'sdotee' ),
+				'refreshing'       => __( 'Refreshing...', 'sdotee' ),
+				'confirm_delete'   => __( 'Are you sure you want to delete this?', 'sdotee' ),
+				'confirm_remove_history' => __( "This will only remove the record from local history.\n\nThe content on S.EE will NOT be deleted. If you need to delete the source file, please visit s.ee/user/links.\n\nContinue?", 'sdotee' ),
+				'no_api_key'       => __( 'Please configure your API key in S.EE settings first.', 'sdotee' ),
+				'show'             => __( 'Show', 'sdotee' ),
+				'hide'             => __( 'Hide', 'sdotee' ),
+			),
+		) );
+	}
+
+	/**
+	 * Add Settings link to plugin action links.
+	 *
+	 * @param array $links Existing links.
+	 * @return array Modified links.
+	 */
+	public function plugin_action_links( array $links ): array {
+		$settings_link = '<a href="' . esc_url( admin_url( 'options-general.php?page=sdotee-settings' ) ) . '">'
+			. esc_html__( 'Settings', 'sdotee' ) . '</a>';
+		array_unshift( $links, $settings_link );
+		return $links;
+	}
+
+	/**
+	 * Render the settings page.
+	 */
+	public function render_settings_page(): void {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html__( 'You do not have permission to access this page.', 'sdotee' ) );
+		}
+		include SDOTEE_PLUGIN_DIR . 'admin/views/settings-page.php';
+	}
+
+	/**
+	 * Render the management page.
+	 */
+	public function render_management_page(): void {
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			wp_die( esc_html__( 'You do not have permission to access this page.', 'sdotee' ) );
+		}
+		include SDOTEE_PLUGIN_DIR . 'admin/views/management-page.php';
+	}
+
+	/**
+	 * Add Short URL column to post/page list.
+	 *
+	 * @param array $columns Existing columns.
+	 * @return array Modified columns.
+	 */
+	public function add_shorturl_column( array $columns ): array {
+		$columns['sdotee_short_url'] = __( 'Short URL', 'sdotee' );
+		return $columns;
+	}
+
+	/**
+	 * Render Short URL column content.
+	 *
+	 * @param string $column  Column name.
+	 * @param int    $post_id Post ID.
+	 */
+	public function render_shorturl_column( string $column, int $post_id ): void {
+		if ( 'sdotee_short_url' !== $column ) {
+			return;
+		}
+
+		$short_url = get_post_meta( $post_id, '_sdotee_short_url', true );
+		if ( ! empty( $short_url ) ) {
+			echo '<a href="' . esc_url( $short_url ) . '" target="_blank" class="sdotee-short-url-link" title="'
+				. esc_attr( $short_url ) . '">' . esc_html( $short_url ) . '</a>';
+			echo ' <button type="button" class="button-link sdotee-copy-btn" data-url="'
+				. esc_attr( $short_url ) . '" title="' . esc_attr__( 'Copy', 'sdotee' ) . '">';
+			echo '<span class="dashicons dashicons-clipboard"></span></button>';
+		} else {
+			echo '<span class="sdotee-no-url">—</span>';
+		}
+	}
+}
