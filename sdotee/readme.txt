@@ -4,7 +4,7 @@ Tags: url shortener, short url, file upload, text share, s.ee
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 8.2
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -89,6 +89,10 @@ Posts and Pages are supported by default.
 
 == Changelog ==
 
+= 1.0.4 =
+* Published to WordPress.org Plugin Directory.
+* Add plugin icons (SVG and PNG fallbacks) for WordPress.org listing.
+
 = 1.0.3 =
 * Rename all prefixes from see_/SEE_ to sdotee_/SDOTEE_ for WordPress.org compliance (minimum 4-character unique prefix).
 * Rename plugin directory from see to sdotee.
@@ -114,6 +118,9 @@ Posts and Pages are supported by default.
 * Full i18n support with 13 languages: English, 简体中文, 繁體中文, 日本語, 한국어, Bahasa Indonesia, Tiếng Việt, Deutsch, Français, Español, Português, Português do Brasil, and Русский.
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+First release on WordPress.org Plugin Directory.
 
 = 1.0.3 =
 All internal prefixes renamed to sdotee_ for WordPress.org compliance. wp-config.php constants changed to SDOTEE_API_KEY and SDOTEE_API_BASE_URL.

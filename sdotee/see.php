@@ -3,7 +3,7 @@
  * Plugin Name: S.EE URL Shortener, Text & File Sharing
  * Plugin URI:  https://github.com/sdotee/see-wordpress
  * Description: Integrate S.EE URL shortener, text sharing, and file hosting into WordPress.
- * Version:     1.0.3
+ * Version:     1.0.4
  * Author:      S.EE
  * Author URI:  https://s.ee
  * License:     MIT
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Plugin constants.
-define( 'SDOTEE_VERSION', '1.0.3' );
+define( 'SDOTEE_VERSION', '1.0.4' );
 define( 'SDOTEE_PLUGIN_FILE', __FILE__ );
 define( 'SDOTEE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SDOTEE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
