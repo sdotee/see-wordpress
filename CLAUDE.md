@@ -28,6 +28,16 @@ sudo cp -r sdotee/ ~/docker/wordpress/wordpress/wp-content/plugins/sdotee/
 
 No build system, linter config, or test suite exists. JS is vanilla jQuery, CSS is plain.
 
+## Version Release Checklist
+
+Files that **must** be updated when bumping the version:
+
+| File | What to update |
+|------|----------------|
+| `sdotee/see.php` | `Version:` header (line 6) and `SDOTEE_VERSION` constant (line 22) |
+| `sdotee/readme.txt` | `Stable tag:`, `== Changelog ==` section, `== Upgrade Notice ==` section |
+| `README.md` | `## Changelog` section |
+
 ## WordPress.org SVN Release
 
 SVN repo: `https://plugins.svn.wordpress.org/sdotee` (username: `sdotee`)
@@ -36,23 +46,19 @@ SVN repo: `https://plugins.svn.wordpress.org/sdotee` (username: `sdotee`)
 # 1. Checkout SVN repo (shallow)
 cd /tmp && svn co https://plugins.svn.wordpress.org/sdotee sdotee-svn --depth immediates
 
-# 2. Copy plugin files to trunk, screenshots to assets
+# 2. Copy plugin files to trunk, screenshots/icons to assets
 rsync -av --exclude='.DS_Store' sdotee/ /tmp/sdotee-svn/trunk/
-cp wp-assets/*.png /tmp/sdotee-svn/assets/
+cp wp-assets/*.png wp-assets/*.svg /tmp/sdotee-svn/assets/
 
 # 3. Add new files
 cd /tmp/sdotee-svn
 svn add trunk/* --force
 svn add assets/* --force
 
-# 4. Update version in trunk (see.php + readme.txt) if needed
-# - see.php: Version header + SDOTEE_VERSION constant
-# - readme.txt: Stable tag
-
-# 5. Create version tag
+# 4. Create version tag
 svn cp trunk tags/X.Y.Z
 
-# 6. Commit (must run in real terminal for password prompt)
+# 5. Commit (must run in real terminal for password prompt)
 svn ci --username sdotee -m "Release vX.Y.Z"
 ```
 
