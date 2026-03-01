@@ -1,5 +1,6 @@
 # S.EE URL Shortener, Text & File Sharing for WordPress
 
+[![WordPress Plugin](https://img.shields.io/wordpress/plugin/v/sdotee?label=WordPress.org)](https://wordpress.org/plugins/sdotee/)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-blue.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/PHP-8.2%2B-purple.svg)](https://www.php.net/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -31,9 +32,11 @@ Integrate [S.EE](https://s.ee) URL shortener, text sharing, and file hosting int
 
 ## Installation
 
-### From WordPress.org
+### From WordPress.org (Recommended)
 
-Search for **S.EE** in **Plugins > Add New** and click **Install Now**.
+Search for **S.EE** or **sdotee** in **Plugins > Add New** and click **Install Now**.
+
+Or install directly from: **[wordpress.org/plugins/sdotee](https://wordpress.org/plugins/sdotee/)**
 
 ### From GitHub Release
 
@@ -76,6 +79,10 @@ define( 'SDOTEE_API_BASE_URL', 'https://your-custom-endpoint/api/v1/' );
 ```
 
 ## Changelog
+
+### 1.0.4
+- Published to [WordPress.org Plugin Directory](https://wordpress.org/plugins/sdotee/)
+- Add plugin icons (SVG + PNG fallbacks) for WordPress.org listing
 
 ### 1.0.3
 - Rename all prefixes from `see_`/`SEE_` to `sdotee_`/`SDOTEE_` for WordPress.org compliance (minimum 4-character unique prefix)

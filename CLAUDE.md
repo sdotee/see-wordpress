@@ -28,6 +28,36 @@ sudo cp -r sdotee/ ~/docker/wordpress/wordpress/wp-content/plugins/sdotee/
 
 No build system, linter config, or test suite exists. JS is vanilla jQuery, CSS is plain.
 
+## WordPress.org SVN Release
+
+SVN repo: `https://plugins.svn.wordpress.org/sdotee` (username: `sdotee`)
+
+```bash
+# 1. Checkout SVN repo (shallow)
+cd /tmp && svn co https://plugins.svn.wordpress.org/sdotee sdotee-svn --depth immediates
+
+# 2. Copy plugin files to trunk, screenshots to assets
+rsync -av --exclude='.DS_Store' sdotee/ /tmp/sdotee-svn/trunk/
+cp wp-assets/*.png /tmp/sdotee-svn/assets/
+
+# 3. Add new files
+cd /tmp/sdotee-svn
+svn add trunk/* --force
+svn add assets/* --force
+
+# 4. Update version in trunk (see.php + readme.txt) if needed
+# - see.php: Version header + SDOTEE_VERSION constant
+# - readme.txt: Stable tag
+
+# 5. Create version tag
+svn cp trunk tags/X.Y.Z
+
+# 6. Commit (must run in real terminal for password prompt)
+svn ci --username sdotee -m "Release vX.Y.Z"
+```
+
+**Note:** Claude Code's terminal cannot handle interactive password input. The `svn ci` command must be run manually in a real terminal. After first login, SVN caches credentials.
+
 ## Architecture
 
 ### Entry Point & Initialization
